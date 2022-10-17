@@ -5,7 +5,7 @@ import Toggle from './utils/Toggle';
 
 export const Header = () => {
     return (
-        <header className="fixed top-0 flex w-screen flex-col items-center p-2">
+        <header className="flex items-center px-4">
             <div className="flex w-full items-center justify-between gap-2 xl:max-w-[80%]">
                 <motion.div
                     initial={{ x: -500, opacity: 0, scale: 0.5 }}
@@ -25,12 +25,7 @@ export const Header = () => {
                         className="motion-safe:hover:animate-bounce motion-safe:focus:animate-bounce"
                         url="https://www.linkedin.com/in/haonguyen-5a08321a9/"
                     />
-                    <SocialIcon
-                        className="motion-safe:hover:animate-bounce motion-safe:focus:animate-bounce"
-                        fgColor="gray"
-                        bgColor="transparent"
-                        url="https://www.instagram.com/haonguyen221/"
-                    />
+
                     <SocialIcon
                         className="motion-safe:hover:animate-bounce motion-safe:focus:animate-bounce"
                         fgColor="gray"

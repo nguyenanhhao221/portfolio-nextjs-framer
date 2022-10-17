@@ -4,7 +4,7 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 const TypeWriter = () => {
     const [text] = useTypewriter({
         words: [
-            "h1> Hello World 👋, It's Hao</h1>",
+            'h1>Hello World 👋</h1>',
             'Code 💻/>',
             'DestroyBug 🪲/>',
             'Sleep 😴/>',
@@ -15,10 +15,12 @@ const TypeWriter = () => {
     });
     return (
         <div>
-            <span className="inline-block text-lg font-bold xl:text-xl">
+            <span className="inline-block font-mono text-lg font-bold xl:text-xl">
                 {'<'}
             </span>
-            <p className="inline-block text-lg font-bold xl:text-xl">{text}</p>
+            <p className="inline-block font-mono text-lg font-bold xl:text-xl">
+                {text}
+            </p>
             <Cursor cursorColor="#ffb400" />
         </div>
     );

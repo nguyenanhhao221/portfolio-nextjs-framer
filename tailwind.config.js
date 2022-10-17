@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
     content: [
         './pages/**/*.{js,ts,jsx,tsx}',
@@ -16,7 +18,14 @@ module.exports = {
                 'gradient-blue-apple-via': '#256af3',
                 'gradient-blue-apple-to': '#7cc0e2',
             },
+            fontFamily: {
+                serif: ['Source Serif Pro', ...defaultTheme.fontFamily.serif],
+                sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
+            },
         },
     },
-    plugins: [require('prettier-plugin-tailwindcss')],
+    plugins: [
+        require('prettier-plugin-tailwindcss'),
+        require('tailwind-scrollbar-hide'),
+    ],
 };
