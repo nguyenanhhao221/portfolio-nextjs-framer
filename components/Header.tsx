@@ -5,7 +5,7 @@ import Toggle from './utils/Toggle';
 
 export const Header = () => {
     return (
-        <header className="flex items-center px-4">
+        <header className="sticky top-0 flex items-center px-4">
             <div className="flex w-full items-center justify-between gap-2 xl:max-w-[80%]">
                 <motion.div
                     initial={{ x: -500, opacity: 0, scale: 0.5 }}

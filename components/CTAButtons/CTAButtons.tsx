@@ -24,7 +24,7 @@ export const CTAButtons = ({
                             className={`h-4 w-4 motion-safe:group-hover:animate-bounce`}
                         />
                     )}
-                    <span className="">{btnTitle}</span>
+                    <span className="text-sm md:text-base">{btnTitle}</span>
                 </div>
             </Link>
         </button>
