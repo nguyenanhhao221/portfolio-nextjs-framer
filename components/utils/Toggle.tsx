@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes';
 
 const Toggle = () => {
     //Dark mode
-    const { theme, setTheme } = useTheme();
+    const { resolvedTheme, setTheme } = useTheme();
     const [mount, setMount] = useState<boolean>(false);
     useEffect(() => {
         setMount(true);
@@ -13,7 +13,7 @@ const Toggle = () => {
     return (
         <>
             <button
-                className="group rounded-md bg-opacity-30 p-1 hover:bg-slate-300"
+                className="group w-10 rounded-md bg-opacity-30 p-1 hover:bg-slate-300"
                 title="Toggle dark/Light mode"
                 type="button"
             >
@@ -26,10 +26,10 @@ const Toggle = () => {
                     strokeWidth={1.5}
                     stroke="currentColor"
                     className={`h-6 w-6 stroke-indigo-500 transition-all group-hover:fill-indigo-500 ${
-                        theme === 'dark' ? `block` : `hidden`
+                        resolvedTheme === 'dark' ? `block` : `hidden`
                     }`}
                     onClick={() => {
-                        if (theme === 'dark') return setTheme('light');
+                        if (resolvedTheme === 'dark') return setTheme('light');
                     }}
                 >
                     <path
@@ -47,10 +47,10 @@ const Toggle = () => {
                     strokeWidth={1.5}
                     stroke="currentColor"
                     className={`h-6 w-6 fill-yellow-500 stroke-yellow-500 transition-all ${
-                        theme === 'light' ? `block` : `hidden`
+                        resolvedTheme === 'light' ? `block` : `hidden`
                     }`}
                     onClick={() => {
-                        if (theme === 'light') return setTheme('dark');
+                        if (resolvedTheme === 'light') return setTheme('dark');
                     }}
                 >
                     <path
