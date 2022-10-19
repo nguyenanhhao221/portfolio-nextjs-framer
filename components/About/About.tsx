@@ -12,7 +12,7 @@ export const About = () => {
                 <motion.h1
                     initial={{ y: -100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 1.2, delay: 0.2 }}
+                    transition={{ duration: 1.2 }}
                     className="bg-gradient-to-r from-gradient-blue-apple-from via-gradient-blue-apple-via to-gradient-blue-apple-to bg-clip-text text-center text-2xl font-bold uppercase tracking-[15px] text-transparent dark:from-gradient-purple-apple-from dark:via-gradient-purple-apple-via dark:to-gradient-purple-apple-to"
                 >
                     About
@@ -22,7 +22,7 @@ export const About = () => {
                 <motion.div
                     initial={{ opacity: 0, x: -200, scale: 0.5 }}
                     whileInView={{ opacity: 1, x: 0, scale: 1 }}
-                    transition={{ duration: 1.2, delay: 0.2 }}
+                    transition={{ duration: 1.2 }}
                 >
                     <Image
                         className="h-48 w-48 rounded-full object-cover object-center md:h-auto md:max-w-sm md:basis-1/3 md:rounded-md"
@@ -33,7 +33,7 @@ export const About = () => {
                 <motion.div
                     initial={{ opacity: 0, x: 200, scale: 0.5 }}
                     whileInView={{ opacity: 1, x: 0, scale: 1 }}
-                    transition={{ duration: 1.2, delay: 0.2 }}
+                    transition={{ duration: 1.2 }}
                     className="flex h-full flex-col items-center gap-6 px-2 md:items-start md:justify-center md:gap-4 xl:text-lg"
                 >
                     <p className="text-center font-serif text-sm font-light leading-relaxed tracking-wide md:text-left md:text-base">

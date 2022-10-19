@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { About } from '../components/About/About';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Heros/Hero';
+import { Skills } from '../components/Skills/Skills';
 
 const Home: NextPage = () => {
     return (
@@ -18,18 +19,26 @@ const Home: NextPage = () => {
 
             {/* Header */}
             <Header />
-            <main className="w-full snap-y snap-mandatory  overflow-y-scroll scroll-smooth scrollbar-hide">
+            <main className="h-screen w-full snap-y snap-mandatory overflow-y-scroll scroll-smooth scrollbar-hide">
                 {/* Hero */}
                 <section
                     id="hero"
-                    className="h-screen snap-center overflow-hidden px-2"
+                    className="h-screen snap-start snap-always overflow-hidden px-2"
                 >
                     <Hero />
                 </section>
                 {/* About */}
-                {/* TODO fix snap */}
-                <section id="about" className="h-screen snap-center px-2">
+                <section
+                    id="about"
+                    className="h-screen snap-center snap-always overflow-hidden px-2"
+                >
                     <About />
+                </section>
+                <section
+                    id="skills"
+                    className="h-screen snap-center snap-always overflow-hidden px-2"
+                >
+                    <Skills />
                 </section>
             </main>
         </>
