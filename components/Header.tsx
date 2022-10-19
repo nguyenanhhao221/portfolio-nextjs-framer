@@ -10,7 +10,7 @@ import {
 import Link from 'next/link';
 export const Header = () => {
     return (
-        <header className="sticky top-0 w-full p-4">
+        <header className="fixed left-0 right-0 top-0 w-full p-4">
             <div className="mx-auto flex w-full items-center justify-between gap-2 xl:max-w-[80%]">
                 <motion.ul
                     initial={{ x: -500, opacity: 0, scale: 0.5 }}
