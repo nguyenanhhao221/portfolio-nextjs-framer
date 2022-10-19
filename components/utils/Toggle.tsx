@@ -13,7 +13,7 @@ const Toggle = () => {
     return (
         <>
             <button
-                className="group w-10 rounded-md bg-opacity-30 p-1 hover:bg-slate-300"
+                className="group rounded-md bg-opacity-30 p-1 hover:bg-slate-300"
                 title="Toggle dark/Light mode"
                 type="button"
             >

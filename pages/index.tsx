@@ -18,20 +18,17 @@ const Home: NextPage = () => {
 
             {/* Header */}
             <Header />
-            <main className="h-screen max-h-screen w-full snap-y snap-mandatory  overflow-y-scroll scroll-smooth  scrollbar-hide">
+            <main className="w-full snap-y snap-mandatory  overflow-y-scroll scroll-smooth scrollbar-hide">
                 {/* Hero */}
                 <section
                     id="hero"
-                    className="h-screen snap-center snap-always overflow-hidden px-2"
+                    className="h-screen snap-center overflow-hidden px-2"
                 >
                     <Hero />
                 </section>
                 {/* About */}
                 {/* TODO fix snap */}
-                <section
-                    id="about"
-                    className="h-screen snap-center snap-always px-2"
-                >
+                <section id="about" className="h-screen snap-center px-2">
                     <About />
                 </section>
             </main>

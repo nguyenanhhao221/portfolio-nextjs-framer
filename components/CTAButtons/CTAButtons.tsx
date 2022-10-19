@@ -18,7 +18,7 @@ export const CTAButtons = ({
             className="group rounded-md bg-gradient-blue-apple-via ring-1 ring-gradient-blue-apple-from transition-colors hover:bg-gradient-blue-apple-from hover:text-white"
         >
             <Link href={'/'} passHref>
-                <div className="flex flex-row items-center gap-2 p-2">
+                <div className="flex flex-row items-center gap-2 py-2 px-4">
                     {Icon && (
                         <Icon
                             className={`h-4 w-4 motion-safe:group-hover:animate-bounce`}
