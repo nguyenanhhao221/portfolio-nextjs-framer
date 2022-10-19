@@ -26,10 +26,10 @@ const Toggle = () => {
                     strokeWidth={1.5}
                     stroke="currentColor"
                     className={`h-6 w-6 stroke-indigo-500 transition-all group-hover:fill-indigo-500 ${
-                        resolvedTheme === 'dark' ? `block` : `hidden`
+                        resolvedTheme === 'dark' ? `hidden` : `block`
                     }`}
                     onClick={() => {
-                        if (resolvedTheme === 'dark') return setTheme('light');
+                        if (resolvedTheme === 'light') return setTheme('dark');
                     }}
                 >
                     <path
@@ -47,10 +47,10 @@ const Toggle = () => {
                     strokeWidth={1.5}
                     stroke="currentColor"
                     className={`h-6 w-6 fill-yellow-500 stroke-yellow-500 transition-all ${
-                        resolvedTheme === 'light' ? `block` : `hidden`
+                        resolvedTheme === 'light' ? `hidden` : `block`
                     }`}
                     onClick={() => {
-                        if (resolvedTheme === 'light') return setTheme('dark');
+                        if (resolvedTheme === 'dark') return setTheme('light');
                     }}
                 >
                     <path
