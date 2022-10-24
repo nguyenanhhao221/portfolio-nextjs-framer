@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { About } from '../components/About/About';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Heros/Hero';
+import { Projects } from '../components/Projects/Projects';
 import { Skills } from '../components/Skills/Skills';
 
 const Home: NextPage = () => {
@@ -30,15 +31,23 @@ const Home: NextPage = () => {
                 {/* About */}
                 <section
                     id="about"
-                    className="h-screen snap-center snap-always overflow-hidden px-2"
+                    className="h-screen snap-center snap-always px-2"
                 >
                     <About />
                 </section>
+                {/* Skills */}
                 <section
                     id="skills"
-                    className="h-screen snap-center snap-always overflow-hidden px-2"
+                    className="h-screen snap-center snap-always px-2"
                 >
                     <Skills />
+                </section>
+                {/* Projects */}
+                <section
+                    id="projects"
+                    className="h-screen snap-center snap-always px-2"
+                >
+                    <Projects />
                 </section>
             </main>
         </>

@@ -1,32 +1,29 @@
 import Link from 'next/link';
 import React from 'react';
-import { Url } from 'url';
 type Props = {
-    CTAProps: {
-        btnTitle: string;
-        Icon: (props: React.ComponentProps<'svg'>) => JSX.Element;
-    };
-    backHome: boolean;
+  CTAProps: {
+    btnTitle: string;
+    Icon: (props: React.ComponentProps<'svg'>) => JSX.Element;
+    className: string;
+  };
+  backHome: boolean;
 };
 export const CTAButtons = ({
-    CTAProps: { btnTitle, Icon },
-    backHome,
+  CTAProps: { btnTitle, Icon, className },
+  backHome,
 }: Props) => {
-    return (
-        <button
-            type="button"
-            className="group rounded-md bg-gradient-blue-apple-via ring-1 ring-gradient-blue-apple-from transition-colors hover:bg-gradient-blue-apple-from hover:text-white"
-        >
-            <Link href={'/'} passHref>
-                <div className="flex flex-row items-center gap-2 py-2 px-4">
-                    {Icon && (
-                        <Icon
-                            className={`h-4 w-4 motion-safe:group-hover:animate-bounce`}
-                        />
-                    )}
-                    <span className="text-sm md:text-base">{btnTitle}</span>
-                </div>
-            </Link>
-        </button>
-    );
+  return (
+    <button type="button" className={className}>
+      <Link href={'/'} passHref>
+        <div className="flex flex-row items-center gap-2 py-2 px-4">
+          {Icon && (
+            <Icon
+              className={`h-4 w-4 motion-safe:group-hover:animate-bounce`}
+            />
+          )}
+          <span className="text-sm md:text-base">{btnTitle}</span>
+        </div>
+      </Link>
+    </button>
+  );
 };
