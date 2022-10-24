@@ -10,15 +10,9 @@ import { Quotes } from '../Quotes/Quotes';
 export const About = () => {
   return (
     <motion.div className="mt-2 flex h-screen flex-col items-center justify-center">
-      <div className="w-full pt-6 pb-4 text-center">
-        <motion.h1
-          initial={{ y: -100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.2 }}
-          className="bg-gradient-to-r from-gradient-blue-apple-from via-gradient-blue-apple-via to-gradient-blue-apple-to bg-clip-text text-center text-2xl font-bold uppercase tracking-[15px] text-transparent dark:from-gradient-purple-apple-from dark:via-gradient-purple-apple-via dark:to-gradient-purple-apple-to"
-        >
-          About
-        </motion.h1>
+      <SectionTitle title="about" />
+      <div className="py-2 text-center font-mono text-sm leading-7 tracking-wider text-slate-400 md:text-base">
+        <Quotes />
       </div>
       <div className="mx-auto flex flex-col items-center gap-6 md:max-w-[80%] md:flex-row md:shadow-2xl">
         <motion.div
@@ -42,14 +36,13 @@ export const About = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
             repudiandae molestias necessitatibus fugit. Aut quam quis alias
             libero sequi qui, fugiat distinctio veritatis.
-            <br />
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto
-            quia hic perferendis eligendi eveniet mollitia
           </p>
           <CTAButtons
             CTAProps={{
               btnTitle: 'Download CV',
               Icon: ArrowDownOnSquareStackIcon,
+              className:
+                'group rounded-md bg-gradient-blue-apple-via ring-1 ring-gradient-blue-apple-from transition-colors hover:bg-gradient-blue-apple-from hover:text-white',
             }}
             backHome={false}
           />
