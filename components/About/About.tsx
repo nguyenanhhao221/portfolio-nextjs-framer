@@ -4,6 +4,7 @@ import HaoAva from '../../public/Hao-Ava.jpg';
 import { CTAButtons } from '../CTAButtons/CTAButtons';
 import { ArrowDownOnSquareStackIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
+import { Quotes } from '../Quotes/Quotes';
 
 export const About = () => {
     return (
@@ -18,6 +19,14 @@ export const About = () => {
                     About
                 </motion.h1>
             </div>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.2 }}
+                className="py-1 text-center text-sm text-slate-400 md:py-4 md:text-base"
+            >
+                <Quotes />
+            </motion.div>
             <div className="mx-auto flex flex-col items-center gap-6 md:max-w-[80%] md:flex-row md:shadow-2xl">
                 <motion.div
                     initial={{ opacity: 0, x: -200, scale: 0.5 }}
@@ -41,10 +50,6 @@ export const About = () => {
                         Praesentium repudiandae molestias necessitatibus fugit.
                         Aut quam quis alias libero sequi qui, fugiat distinctio
                         veritatis.
-                        <br />
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Architecto quia hic perferendis eligendi eveniet
-                        mollitia
                     </p>
                     <CTAButtons
                         CTAProps={{
