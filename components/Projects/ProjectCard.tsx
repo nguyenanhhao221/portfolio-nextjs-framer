@@ -24,6 +24,7 @@ export const ProjectCard = ({ project, index, total }: Props) => {
           className="rounded-lg object-cover lg:max-h-72 "
           alt={name}
           src={image}
+          placeholder="blur"
         ></Image>
       </div>
       <div>
