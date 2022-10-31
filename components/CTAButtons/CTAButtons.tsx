@@ -7,6 +7,7 @@ type Props = {
     className: string;
   };
 };
+//TODO update correct link for button
 export const CTAButtons = ({
   CTAProps: { btnTitle, Icon, className },
 }: Props) => {
