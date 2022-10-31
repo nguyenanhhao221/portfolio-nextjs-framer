@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         {/* Projects */}
         <section
           id="projects"
-          className="min-h-screen snap-none snap-proximity snap-start px-2 lg:grid lg:place-content-center"
+          className="grid min-h-screen snap-none snap-proximity snap-start grid-cols-1 place-content-center px-2"
         >
           <Projects />
         </section>

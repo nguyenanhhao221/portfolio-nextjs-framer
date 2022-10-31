@@ -1,76 +1,11 @@
 import React from 'react';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
-import HuluDisplayImg from '../../public/HuluDisplayImg.png';
-import LinkShortImg from '../../public/LinkShortImg.png';
-import CryptoverseImg from '../../public/cryptoverse.png';
-import PortFolioImg from '../../public/portfolioImg.png';
-import { z } from 'zod';
 import { ProjectCard } from './ProjectCard';
 import { motion } from 'framer-motion';
-
-export const TProjectType = z.object({
-  id: z.string(),
-  name: z.string(),
-  //TODO type correct image
-  image: z.any(),
-  description: z.string(),
-  links: z.object({
-    github: z.string().url(),
-    deployment: z.string().url(),
-  }),
-});
-
-//TODO think about moving this to a CMS system instead of hardcode
-const allProjects = z.array(TProjectType).parse([
-  {
-    id: 'hulu',
-    name: 'Hulu Clone',
-    image: HuluDisplayImg,
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cupiditate dicta explicabo optio alias a ratione, provident doloribus voluptatum neque non ab quidem animi, eveniet accusantium facere aliquid accusamus sit?',
-    links: {
-      github: 'https://github.com/nguyenanhhao221/hulu-clone',
-      deployment: 'https://hulu.haonguyen.tech',
-    },
-  },
-  {
-    id: 'cryptoverse',
-    name: 'Cryptoverse',
-    image: CryptoverseImg,
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cupiditate dicta explicabo optio alias a ratione, provident doloribus voluptatum neque non ab quidem animi, eveniet accusantium facere aliquid accusamus sit?',
-    links: {
-      github: 'https://github.com/nguyenanhhao221/crypto-app-nextjs',
-      deployment: 'https://cryptoverse.haonguyen.tech',
-    },
-  },
-  {
-    id: 'short-link',
-    name: 'Link Shortener',
-    image: LinkShortImg,
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cupiditate dicta explicabo optio alias a ratione, provident doloribus voluptatum neque non ab quidem animi, eveniet accusantium facere aliquid accusamus sit?',
-    links: {
-      github: 'https://github.com/nguyenanhhao221/link-shortener',
-      deployment: 'https://links.haonguyen.tech',
-    },
-  },
-  {
-    id: 'portfolio',
-    name: 'Personal Portfolio',
-    image: PortFolioImg,
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cupiditate dicta explicabo optio alias a ratione, provident doloribus voluptatum neque non ab quidem animi, eveniet accusantium facere aliquid accusamus sit?',
-    links: {
-      github: 'https://github.com/nguyenanhhao221/portfolio-nextjs-framer',
-      deployment: 'https://haonguyen.tech',
-    },
-  },
-]);
-
+import { allProjects } from '../../helpers/allProjects';
 export const Projects = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-4 pt-10 lg:pt-12">
+    <div className="flex h-full flex-col items-center justify-center px-4 pt-10 lg:pt-12">
       <SectionTitle title="Projects" />
       <div>
         <p className="py-2 text-center text-xs leading-4 text-slate-400 lg:text-base ">
@@ -88,9 +23,10 @@ export const Projects = () => {
         </p>
       </div>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, scale: [2, 1] }}
-        transition={{ duration: 1.5, delay: 0.5 }}
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5 }}
         className="carousel w-full lg:flex lg:justify-center"
       >
         <ul className="inner-carousel flex w-full snap-x snap-mandatory gap-4 overflow-y-hidden overflow-x-scroll overscroll-x-contain py-2 scrollbar-hide lg:grid lg:w-[80%] lg:grid-cols-2 lg:place-content-center lg:gap-16">
