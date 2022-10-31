@@ -2,7 +2,7 @@ import Image from 'next/future/image';
 import React from 'react';
 import HaoAva from '../../public/Hao-Ava.jpg';
 import { CTAButtons } from '../CTAButtons/CTAButtons';
-import { ArrowDownOnSquareStackIcon } from '@heroicons/react/24/outline';
+import { DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import { Quotes } from '../Quotes/Quotes';
@@ -24,6 +24,7 @@ export const About = () => {
             className="h-48 w-48 rounded-full object-cover object-center md:h-auto md:max-w-sm md:basis-1/3 md:rounded-md"
             alt="Hao"
             src={HaoAva}
+            placeholder="blur"
           />
         </motion.div>
         <motion.div
@@ -40,9 +41,9 @@ export const About = () => {
           <CTAButtons
             CTAProps={{
               btnTitle: 'Download CV',
-              Icon: ArrowDownOnSquareStackIcon,
+              Icon: DocumentArrowDownIcon,
               className:
-                'group rounded-md bg-gradient-blue-apple-via ring-1 ring-gradient-blue-apple-from transition-colors hover:bg-gradient-blue-apple-from hover:text-white',
+                'group rounded-md bg-gradient-purple-apple-via ring-1 ring-gradient-purple-apple-from transition-colors hover:bg-gradient-purple-apple-from hover:text-white',
             }}
           />
         </motion.div>
