@@ -1,7 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
 import HuluDisplayImg from '../../public/HuluDisplayImg.png';
+import LinkShortImg from '../../public/LinkShortImg.png';
 import CryptoverseImg from '../../public/cryptoverse.png';
+import PortFolioImg from '../../public/portfolioImg.png';
 import { z } from 'zod';
 import { ProjectCard } from './ProjectCard';
 import { motion } from 'framer-motion';
@@ -28,7 +30,7 @@ const allProjects = z.array(TProjectType).parse([
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cupiditate dicta explicabo optio alias a ratione, provident doloribus voluptatum neque non ab quidem animi, eveniet accusantium facere aliquid accusamus sit?',
     links: {
       github: 'https://github.com/nguyenanhhao221/hulu-clone',
-      deployment: 'https://projects.haonguyen.tech',
+      deployment: 'https://hulu.haonguyen.tech',
     },
   },
   {
@@ -38,62 +40,65 @@ const allProjects = z.array(TProjectType).parse([
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cupiditate dicta explicabo optio alias a ratione, provident doloribus voluptatum neque non ab quidem animi, eveniet accusantium facere aliquid accusamus sit?',
     links: {
-      github: 'https://github.com/nguyenanhhao221/hulu-clone',
-      deployment: 'https://projects.haonguyen.tech',
+      github: 'https://github.com/nguyenanhhao221/crypto-app-nextjs',
+      deployment: 'https://cryptoverse.haonguyen.tech',
     },
   },
   {
-    id: 'Portfolio',
-    name: 'Hao Portfolio',
-    image: HuluDisplayImg,
+    id: 'short-link',
+    name: 'Link Shortener',
+    image: LinkShortImg,
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cupiditate dicta explicabo optio alias a ratione, provident doloribus voluptatum neque non ab quidem animi, eveniet accusantium facere aliquid accusamus sit?',
     links: {
-      github: 'https://github.com/nguyenanhhao221/hulu-clone',
-      deployment: 'https://projects.haonguyen.tech',
+      github: 'https://github.com/nguyenanhhao221/link-shortener',
+      deployment: 'https://links.haonguyen.tech',
+    },
+  },
+  {
+    id: 'portfolio',
+    name: 'Personal Portfolio',
+    image: PortFolioImg,
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cupiditate dicta explicabo optio alias a ratione, provident doloribus voluptatum neque non ab quidem animi, eveniet accusantium facere aliquid accusamus sit?',
+    links: {
+      github: 'https://github.com/nguyenanhhao221/portfolio-nextjs-framer',
+      deployment: 'https://haonguyen.tech',
     },
   },
 ]);
 
 export const Projects = () => {
-  const listRef = useRef<HTMLUListElement>(null);
-  // use to scroll to item in mobile view
-  function scrollToIndex(index: number) {
-    const listNode = listRef.current;
-    const itemList = listNode?.querySelectorAll('li')[index];
-    return itemList?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center',
-    });
-  }
   return (
-    <div className="flex flex-col items-center justify-center px-4">
+    <div className="flex flex-col items-center justify-center px-4 pt-10 lg:pt-12">
       <SectionTitle title="Projects" />
-      <div className="carousel w-full cursor-grab lg:flex lg:cursor-default lg:place-content-center">
-        {/* <div className="flex w-full items-center justify-center gap-4 py-2 lg:hidden">
+      <div>
+        <p className="py-2 text-center text-xs leading-4 text-slate-400 lg:text-base ">
+          Here are some of my highlighted projects. For more, please consider
+          visit my{' '}
+          <a
+            className="font-bold underline decoration-fuchsia-500 underline-offset-4"
+            target="_blank"
+            href="https://github.com/nguyenanhhao221"
+            rel="noopener noreferrer"
+            title="Visit Github"
+          >
+            GitHub Profile
+          </a>
+        </p>
+      </div>
+      <div className="carousel w-full lg:flex lg:cursor-default lg:place-content-center">
+        <motion.ul className="inner-carousel flex w-full snap-x snap-mandatory gap-4 overflow-y-hidden overflow-x-scroll overscroll-x-contain py-2 scrollbar-hide lg:grid lg:w-[80%] lg:grid-cols-2 lg:place-content-center lg:gap-16 lg:overflow-y-visible">
           {allProjects.map((project, index) => (
-            <button
-              type="button"
-              key={project.id}
-              onClick={() => {
-                scrollToIndex(index);
-              }}
-              title="move to item"
-              className="h-4 w-4 rounded-full bg-red-400"
-            ></button>
-          ))}
-        </div> */}
-        <motion.ul
-          ref={listRef}
-          className="inner-carousel flex w-full snap-x snap-mandatory gap-4 overflow-y-hidden overflow-x-scroll py-2 scrollbar-hide lg:grid lg:w-[80%] lg:grid-cols-2 lg:place-content-center lg:gap-16 lg:overflow-y-visible"
-        >
-          {allProjects.map((project) => (
             <motion.li
               key={project.id}
-              className="w-full flex-shrink-0 cursor-pointer snap-center snap-always rounded-lg shadow-2xl transition-transform lg:border lg:border-slate-400 lg:border-opacity-30 lg:motion-safe:hover:border-opacity-100"
+              className="w-full flex-shrink-0 snap-center snap-always rounded-lg shadow-2xl transition-transform lg:border lg:border-slate-400 lg:border-opacity-30 lg:motion-safe:hover:border-opacity-100"
             >
-              <ProjectCard project={project} />
+              <ProjectCard
+                total={allProjects.length}
+                project={project}
+                index={index}
+              />
             </motion.li>
           ))}
         </motion.ul>

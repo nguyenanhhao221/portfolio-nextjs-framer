@@ -39,7 +39,7 @@ export const Skills = () => {
   };
 
   return (
-    <div className="mt-2 flex h-screen flex-col items-center justify-center">
+    <div className="mt-2 flex flex-col items-center justify-center">
       <SectionTitle title="Skills" />
       <div className="flex flex-col gap-4 px-4">
         <div className="front-end space-y-4 rounded-lg p-2 shadow-2xl md:p-4">

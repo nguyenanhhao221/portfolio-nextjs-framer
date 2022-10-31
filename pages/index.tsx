@@ -30,13 +30,16 @@ const Home: NextPage = () => {
           <About />
         </section>
         {/* Skills */}
-        <section id="skills" className="h-screen snap-center snap-always px-2">
+        <section
+          id="skills"
+          className="grid h-screen snap-center snap-always place-content-center px-2"
+        >
           <Skills />
         </section>
         {/* Projects */}
         <section
           id="projects"
-          className="snap-none snap-proximity snap-start px-2"
+          className="min-h-screen snap-none snap-proximity snap-start px-2 lg:grid lg:place-content-center"
         >
           <Projects />
         </section>
