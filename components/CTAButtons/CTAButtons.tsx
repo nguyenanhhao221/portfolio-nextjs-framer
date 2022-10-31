@@ -6,11 +6,9 @@ type Props = {
     Icon: (props: React.ComponentProps<'svg'>) => JSX.Element;
     className: string;
   };
-  backHome: boolean;
 };
 export const CTAButtons = ({
   CTAProps: { btnTitle, Icon, className },
-  backHome,
 }: Props) => {
   return (
     <button type="button" className={className}>

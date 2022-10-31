@@ -44,7 +44,6 @@ export const About = () => {
               className:
                 'group rounded-md bg-gradient-blue-apple-via ring-1 ring-gradient-blue-apple-from transition-colors hover:bg-gradient-blue-apple-from hover:text-white',
             }}
-            backHome={false}
           />
         </motion.div>
       </div>
