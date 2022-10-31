@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
-import { skillsData } from '../utils/skillsIcons';
+import { skillsData } from '../Utils/skillsIcons';
 
 export const Skills = () => {
   const listMotion = {
@@ -18,7 +18,6 @@ export const Skills = () => {
     hidden: { opacity: 0, x: -400 },
     visible: { opacity: 1, x: 0 },
   };
-
   return (
     <div className="mt-2 flex flex-col items-center justify-center">
       <SectionTitle title="Skills" />
@@ -49,10 +48,12 @@ export const Skills = () => {
                 <motion.li
                   key={name}
                   variants={itemMotion}
+                  viewport={{ once: true }}
                   className="group flex w-14 flex-col items-center gap-1 transition-transform md:gap-2 md:motion-safe:hover:scale-125 md:motion-safe:focus:scale-125"
                 >
                   <Icon
-                    className={`h-6 w-6 fill-[${color}] transition-all md:h-10 md:w-10 md:motion-safe:group-hover:scale-125 lg:h-16 lg:w-16`}
+                    className={`h-6 w-6 transition-all md:h-10 md:w-10 md:motion-safe:group-hover:scale-125 lg:h-16 lg:w-16`}
+                    color={color}
                   />
                   <span className="break-words text-center text-xs italic tracking-wide dark:text-gray-400 md:text-sm md:motion-safe:group-hover:scale-125">
                     {name}
