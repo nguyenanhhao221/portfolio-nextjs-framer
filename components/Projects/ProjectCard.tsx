@@ -13,12 +13,7 @@ type Props = {
 export const ProjectCard = ({ project, index, total }: Props) => {
   const { description, links, name, image } = project;
   return (
-    <a
-      href={links.deployment}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex h-full w-full flex-col items-center gap-2 md:gap-4"
-    >
+    <div className="flex h-full w-full flex-col items-center gap-2 md:gap-4">
       <h3 className="font-bold tracking-widest underline underline-offset-8 lg:hidden">
         Case study: {index + 1} of {total}
       </h3>
@@ -67,6 +62,6 @@ export const ProjectCard = ({ project, index, total }: Props) => {
           </motion.a>
         </div>
       </div>
-    </a>
+    </div>
   );
 };

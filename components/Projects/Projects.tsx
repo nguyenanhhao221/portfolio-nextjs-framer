@@ -29,7 +29,7 @@ export const Projects = () => {
         transition={{ delay: 0.5 }}
         className="carousel w-full lg:flex lg:justify-center"
       >
-        <ul className="inner-carousel flex w-full snap-x snap-mandatory gap-4 overflow-y-hidden overflow-x-scroll overscroll-x-contain py-2 scrollbar scrollbar-thin scrollbar-track-gray-700 scrollbar-thumb-gradient-purple-apple-via lg:grid lg:w-[80%] lg:grid-cols-2 lg:place-content-center lg:gap-16">
+        <ul className="inner-carousel flex w-full snap-x snap-mandatory gap-4 overflow-y-hidden overflow-x-scroll overscroll-x-contain py-2  scrollbar-thin scrollbar-track-gray-700 scrollbar-thumb-gradient-purple-apple-via lg:grid lg:w-[80%] lg:grid-cols-2 lg:place-content-center lg:gap-16 xl:grid-cols-3">
           {allProjects.map((project, index) => (
             <li
               key={project.id}
