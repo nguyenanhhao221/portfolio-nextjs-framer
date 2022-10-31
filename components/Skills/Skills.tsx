@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionTitle } from '../SectionTitle/SectionTitle';
-import { skillsData } from '../Utils/skillsIcons';
+import { skillsData } from '../../helpers/skillsIcons';
 
 export const Skills = () => {
   const listMotion = {
