@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { About } from '../components/About/About';
-import { Header } from '../components/Header';
+import { Header } from '../components/Header/Header';
 import { Hero } from '../components/Heros/Hero';
 import { Projects } from '../components/Projects/Projects';
 import { Skills } from '../components/Skills/Skills';

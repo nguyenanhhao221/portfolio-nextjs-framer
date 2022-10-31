@@ -93,7 +93,7 @@ export const Projects = () => {
           </a>
         </p>
       </div>
-      <div className="carousel w-full lg:flex lg:cursor-default lg:place-content-center">
+      <div className="carousel w-full lg:flex lg:cursor-default">
         <ul className="inner-carousel flex w-full snap-x snap-mandatory gap-4 overflow-y-hidden overflow-x-scroll overscroll-x-contain py-2 scrollbar-hide lg:grid lg:w-[80%] lg:grid-cols-2 lg:place-content-center lg:gap-16">
           {allProjects.map((project, index) => (
             <li
