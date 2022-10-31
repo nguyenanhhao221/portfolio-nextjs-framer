@@ -71,13 +71,14 @@ const allProjects = z.array(TProjectType).parse([
 export const Projects = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{ opacity: [0.5, 1], scale: [1.5, 1] }}
-      transition={{ duration: 1.5 }}
+      initial={{ scale: 2 }}
+      whileInView={{ scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
       className="flex flex-col items-center justify-center px-4 pt-10 lg:pt-12"
     >
       <SectionTitle title="Projects" />
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+      <div>
         <p className="py-2 text-center text-xs leading-4 text-slate-400 lg:text-base ">
           Here are some of my highlighted projects. For more, please consider
           visit my{' '}
@@ -91,9 +92,9 @@ export const Projects = () => {
             GitHub Profile
           </a>
         </p>
-      </motion.div>
+      </div>
       <div className="carousel w-full lg:flex lg:cursor-default lg:place-content-center">
-        <ul className="inner-carousel flex w-full snap-x snap-mandatory gap-4 overflow-y-hidden overflow-x-scroll overscroll-x-contain py-2 scrollbar-hide lg:grid lg:w-[80%] lg:grid-cols-2 lg:place-content-center lg:gap-16 lg:overflow-y-visible">
+        <ul className="inner-carousel flex w-full snap-x snap-mandatory gap-4 overflow-y-hidden overflow-x-scroll overscroll-x-contain py-2 scrollbar-hide lg:grid lg:w-[80%] lg:grid-cols-2 lg:place-content-center lg:gap-16">
           {allProjects.map((project, index) => (
             <li
               key={project.id}

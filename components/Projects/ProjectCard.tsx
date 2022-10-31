@@ -15,31 +15,34 @@ type Props = {
 export const ProjectCard = ({ project, index, total }: Props) => {
   const { description, links, name, image } = project;
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex h-full w-full flex-col items-center gap-2 md:gap-4">
       <h3 className="font-bold tracking-widest underline underline-offset-8 lg:hidden">
         Case study: {index + 1} of {total}
       </h3>
-      <div className="overflow-hidden lg:h-72">
-        <Image
-          className="rounded-lg object-cover lg:max-h-72 "
-          alt={name}
-          src={image}
-          placeholder="blur"
-        ></Image>
-      </div>
+      <h2 className="text-center text-xl font-bold capitalize tracking-widest lg:hidden lg:py-2 lg:text-3xl">
+        {name}
+      </h2>
       <div>
-        <h2 className="text-center text-xl font-bold capitalize tracking-widest lg:text-3xl">
+        <div className="h-44 w-full overflow-hidden md:h-[400px]">
+          <Image
+            className="h-full w-full rounded-lg object-fill object-center"
+            alt={name}
+            src={image}
+            placeholder="blur"
+          ></Image>
+        </div>
+        <h2 className="hidden text-center text-xl font-bold capitalize tracking-widest lg:block lg:py-4 lg:text-3xl">
           {name}
         </h2>
-        <p className="text-center text-slate-400 lg:px-4 lg:py-4 lg:text-lg">
+        <p className="pt-1 text-center text-sm text-slate-400 md:text-base lg:px-4 lg:py-4 lg:text-lg">
           {description}
         </p>
       </div>
-      <div className="flex gap-2 py-2 lg:py-8">
-        <div>
+      <div className="flex gap-2 py-2">
+        <div className="h-full">
           <Link href={links.github} passHref title="Source code">
             <a
-              className="flex items-center gap-2 rounded-md p-2 underline decoration-gradient-purple-apple-from underline-offset-4  motion-safe:hover:scale-110"
+              className="flex items-center gap-2 rounded-md p-2 underline decoration-gradient-purple-apple-from underline-offset-4 motion-safe:hover:scale-110"
               target={'_blank'}
               rel="noopener noreferrer"
             >
@@ -51,7 +54,7 @@ export const ProjectCard = ({ project, index, total }: Props) => {
         <div>
           <Link href={links.deployment} passHref title="Live Demo">
             <motion.a
-              className="flex items-center gap-2 rounded-md p-2 underline decoration-gradient-purple-apple-from underline-offset-4  motion-safe:hover:scale-110"
+              className="flex items-center gap-2 rounded-md p-2 underline decoration-gradient-purple-apple-from underline-offset-4 motion-safe:hover:scale-110"
               target={'_blank'}
               rel="noopener noreferrer"
             >

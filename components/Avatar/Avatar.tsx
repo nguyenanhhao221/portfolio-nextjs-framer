@@ -15,7 +15,6 @@ const Avatar = () => {
         alt="Hao"
         src={HaoAvaMemoji}
         placeholder="blur"
-        priority
       />
     </motion.div>
   );

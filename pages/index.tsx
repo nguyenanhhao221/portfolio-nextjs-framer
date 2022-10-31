@@ -26,13 +26,16 @@ const Home: NextPage = () => {
           <Hero />
         </section>
         {/* About */}
-        <section id="about" className="h-screen snap-center snap-always px-2">
+        <section
+          id="about"
+          className="min-h-screen snap-center snap-always px-2"
+        >
           <About />
         </section>
         {/* Skills */}
         <section
           id="skills"
-          className="grid h-screen snap-center snap-always place-content-center px-2"
+          className="grid min-h-screen snap-center snap-always place-content-center px-2"
         >
           <Skills />
         </section>

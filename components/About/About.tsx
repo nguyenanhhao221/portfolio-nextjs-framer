@@ -9,7 +9,7 @@ import { Quotes } from '../Quotes/Quotes';
 
 export const About = () => {
   return (
-    <motion.div className="mt-2 flex h-screen flex-col items-center justify-center">
+    <div className="mt-2 flex h-screen flex-col items-center justify-center">
       <SectionTitle title="about" />
       <div className="py-2 text-center font-mono text-sm leading-7 tracking-wider text-slate-400 md:text-base">
         <Quotes />
@@ -24,7 +24,6 @@ export const About = () => {
             className="h-48 w-48 rounded-full object-cover object-center md:h-auto md:max-w-sm md:basis-1/3 md:rounded-md"
             alt="Hao"
             src={HaoAva}
-            placeholder="blur"
           />
         </motion.div>
         <motion.div
@@ -48,6 +47,6 @@ export const About = () => {
           />
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
