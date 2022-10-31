@@ -1,11 +1,9 @@
 import React from 'react';
 import Image from 'next/future/image';
 import { z } from 'zod';
-import { TProjectType } from './Projects';
+import { TProjectType } from '../../helpers/allProjects';
 import { motion } from 'framer-motion';
 import { CodeBracketIcon, TvIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
-
 type Props = {
   project: z.infer<typeof TProjectType>;
   index: number;
@@ -15,7 +13,12 @@ type Props = {
 export const ProjectCard = ({ project, index, total }: Props) => {
   const { description, links, name, image } = project;
   return (
-    <div className="flex h-full w-full flex-col items-center gap-2 md:gap-4">
+    <a
+      href={links.deployment}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex h-full w-full flex-col items-center gap-2 md:gap-4"
+    >
       <h3 className="font-bold tracking-widest underline underline-offset-8 lg:hidden">
         Case study: {index + 1} of {total}
       </h3>
@@ -40,30 +43,30 @@ export const ProjectCard = ({ project, index, total }: Props) => {
       </div>
       <div className="flex gap-2 py-2">
         <div className="h-full">
-          <Link href={links.github} passHref title="Source code">
-            <a
-              className="flex items-center gap-2 rounded-md p-2 underline decoration-gradient-purple-apple-from underline-offset-4 motion-safe:hover:scale-110"
-              target={'_blank'}
-              rel="noopener noreferrer"
-            >
-              <CodeBracketIcon className="hidden h-4 w-4 md:block" />
-              <p className="capitalize">source code</p>
-            </a>
-          </Link>
+          <a
+            className="flex items-center gap-2 rounded-md p-2 underline decoration-gradient-purple-apple-from underline-offset-4 motion-safe:hover:scale-110"
+            target={'_blank'}
+            rel="noopener noreferrer"
+            href={links.github}
+            title="Source code"
+          >
+            <CodeBracketIcon className="hidden h-4 w-4 md:block" />
+            <p className="capitalize">source code</p>
+          </a>
         </div>
         <div>
-          <Link href={links.deployment} passHref title="Live Demo">
-            <motion.a
-              className="flex items-center gap-2 rounded-md p-2 underline decoration-gradient-purple-apple-from underline-offset-4 motion-safe:hover:scale-110"
-              target={'_blank'}
-              rel="noopener noreferrer"
-            >
-              <TvIcon className="hidden h-4 w-4 md:block" />
-              <p className="capitalize">live demo</p>
-            </motion.a>
-          </Link>
+          <motion.a
+            href={links.deployment}
+            title="Live Demo"
+            className="flex items-center gap-2 rounded-md p-2 underline decoration-gradient-purple-apple-from underline-offset-4 motion-safe:hover:scale-110"
+            target={'_blank'}
+            rel="noopener noreferrer"
+          >
+            <TvIcon className="hidden h-4 w-4 md:block" />
+            <p className="capitalize">live demo</p>
+          </motion.a>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
