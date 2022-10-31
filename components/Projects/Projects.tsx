@@ -70,13 +70,7 @@ const allProjects = z.array(TProjectType).parse([
 
 export const Projects = () => {
   return (
-    <motion.div
-      initial={{ scale: 2 }}
-      whileInView={{ scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="flex flex-col items-center justify-center px-4 pt-10 lg:pt-12"
-    >
+    <div className="flex flex-col items-center justify-center px-4 pt-10 lg:pt-12">
       <SectionTitle title="Projects" />
       <div>
         <p className="py-2 text-center text-xs leading-4 text-slate-400 lg:text-base ">
@@ -93,7 +87,12 @@ export const Projects = () => {
           </a>
         </p>
       </div>
-      <div className="carousel w-full lg:flex lg:cursor-default">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, scale: [2, 1] }}
+        transition={{ duration: 1.5, delay: 0.5 }}
+        className="carousel w-full lg:flex lg:justify-center"
+      >
         <ul className="inner-carousel flex w-full snap-x snap-mandatory gap-4 overflow-y-hidden overflow-x-scroll overscroll-x-contain py-2 scrollbar-hide lg:grid lg:w-[80%] lg:grid-cols-2 lg:place-content-center lg:gap-16">
           {allProjects.map((project, index) => (
             <li
@@ -108,7 +107,7 @@ export const Projects = () => {
             </li>
           ))}
         </ul>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };

@@ -18,6 +18,7 @@ export const About = () => {
         <motion.div
           initial={{ opacity: 0, x: -200, scale: 0.5 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 1.2 }}
         >
           <Image
@@ -29,6 +30,7 @@ export const About = () => {
         <motion.div
           initial={{ opacity: 0, x: 200, scale: 0.5 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 1.2 }}
           className="flex h-full flex-col items-center gap-6 px-2 md:items-start md:justify-center md:gap-4 xl:text-lg"
         >

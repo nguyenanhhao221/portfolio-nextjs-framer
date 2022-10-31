@@ -31,6 +31,7 @@ export const Skills = () => {
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 1.2 }}
               className="hover:shadow-highlight-blue inline-block font-bold capitalize tracking-widest md:text-xl"
             >
