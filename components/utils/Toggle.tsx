@@ -9,7 +9,7 @@ export const Toggle = () => {
   useEffect(() => {
     setMount(true);
   }, []);
-  if (!mount) return null;
+  if (!mount) return <></>;
   return (
     <>
       <button
