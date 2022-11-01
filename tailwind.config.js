@@ -29,5 +29,6 @@ module.exports = {
     require('tailwind-scrollbar-hide'),
     require('@tailwindcss/typography'),
     require('tailwind-scrollbar'),
+    require('@tailwindcss/forms'),
   ],
 };

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { About } from '../components/About/About';
+import { Contact } from '../components/Contact/Contact';
 import { Header } from '../components/Header/Header';
 import { Hero } from '../components/Heros/Hero';
 import { Projects } from '../components/Projects/Projects';
@@ -45,6 +46,12 @@ const Home: NextPage = () => {
           className="grid min-h-screen snap-none snap-proximity snap-start grid-cols-1 place-content-center px-2"
         >
           <Projects />
+        </section>
+        <section
+          id="contact"
+          className="grid min-h-screen snap-start snap-always grid-cols-1 place-content-center px-2"
+        >
+          <Contact />
         </section>
       </main>
     </>
