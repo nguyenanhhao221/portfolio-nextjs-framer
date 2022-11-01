@@ -1,16 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
 type Props = {
-  CTAProps: {
-    btnTitle: string;
-    Icon: (props: React.ComponentProps<'svg'>) => JSX.Element;
-    className: string;
-  };
+  btnTitle: string;
+  Icon: (props: React.ComponentProps<'svg'>) => JSX.Element;
+  className: string;
 };
 //TODO update correct link for button
-export const CTAButtons = ({
-  CTAProps: { btnTitle, Icon, className },
-}: Props) => {
+export const CTAButtons = ({ btnTitle, Icon, className }: Props) => {
   return (
     <button type="button" className={className}>
       <Link href={'/'} passHref>

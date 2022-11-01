@@ -40,12 +40,9 @@ export const About = () => {
             libero sequi qui, fugiat distinctio veritatis.
           </p>
           <CTAButtons
-            CTAProps={{
-              btnTitle: 'Download CV',
-              Icon: DocumentArrowDownIcon,
-              className:
-                'group rounded-md bg-gradient-purple-apple-via ring-1 ring-gradient-purple-apple-from transition-colors hover:bg-gradient-purple-apple-from hover:text-white',
-            }}
+            btnTitle="Download CV"
+            Icon={DocumentArrowDownIcon}
+            className="group rounded-md bg-gradient-purple-apple-via ring-1 ring-gradient-purple-apple-from transition-colors hover:bg-gradient-purple-apple-from hover:text-white"
           />
         </motion.div>
       </div>
