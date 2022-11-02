@@ -13,13 +13,7 @@ type Props = {
 export const ProjectCard = ({ project, index, total }: Props) => {
   const { description, links, name, image } = project;
   return (
-    <motion.div
-      initial={{ y: 300 }}
-      whileInView={{ y: 0 }}
-      transition={{ type: 'spring', bounce: 0.4 }}
-      viewport={{ once: true, fallback: false }}
-      className="flex h-full w-full flex-col items-center gap-2 md:gap-4"
-    >
+    <div className="flex h-full w-full flex-col items-center gap-2 md:gap-4">
       <h3 className="font-bold tracking-widest underline underline-offset-8 lg:hidden">
         Case study: {index + 1} of {total}
       </h3>
@@ -27,14 +21,19 @@ export const ProjectCard = ({ project, index, total }: Props) => {
         {name}
       </h2>
       <div>
-        <div className="h-44 w-full overflow-hidden md:h-[400px]">
+        <motion.div
+          initial={{ y: -100 }}
+          whileInView={{ y: 0 }}
+          transition={{ type: 'spring', bounce: 0.4 }}
+          className="h-44 w-full overflow-hidden md:h-[400px]"
+        >
           <Image
             className="h-full w-full rounded-lg object-fill object-center"
             alt={name}
             src={image}
             placeholder="blur"
           ></Image>
-        </div>
+        </motion.div>
         <h2 className="hidden text-center text-xl font-bold capitalize tracking-widest lg:block lg:py-4 lg:text-3xl">
           {name}
         </h2>
@@ -68,6 +67,6 @@ export const ProjectCard = ({ project, index, total }: Props) => {
           </a>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };

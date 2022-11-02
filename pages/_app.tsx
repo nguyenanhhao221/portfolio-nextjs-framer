@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 import Head from 'next/head';
@@ -87,6 +88,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <QueryClientProvider client={queryClient}>
         <ThemeProvider attribute="class">
           <Component {...pageProps} />
+          <ReactQueryDevtools initialIsOpen={false} />
         </ThemeProvider>
       </QueryClientProvider>
     </>

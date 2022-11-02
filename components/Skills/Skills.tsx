@@ -41,7 +41,6 @@ export const Skills = () => {
               variants={listMotion}
               initial={'hidden'}
               whileInView={'visible'}
-              viewport={{ once: true }}
               exit={{ opacity: 0 }}
               className="flex flex-row flex-wrap justify-center gap-1 sm:gap-2 md:gap-8 lg:gap-12"
             >
@@ -49,8 +48,7 @@ export const Skills = () => {
                 <motion.li
                   key={name}
                   variants={itemMotion}
-                  viewport={{ once: true }}
-                  className="group flex w-14 flex-col items-center gap-1 transition-transform md:gap-2 md:motion-safe:hover:scale-125 md:motion-safe:focus:scale-125"
+                  className="group flex w-14 flex-col items-center gap-1 transition-transform md:gap-2 md:motion-safe:focus:scale-125 md:motion-safe:hover:scale-125"
                 >
                   <Icon
                     className={`h-6 w-6 transition-all md:h-10 md:w-10 md:motion-safe:group-hover:scale-125 lg:h-16 lg:w-16`}

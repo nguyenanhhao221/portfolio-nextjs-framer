@@ -3,6 +3,7 @@ import { SectionTitle } from '../SectionTitle/SectionTitle';
 import { ProjectCard } from './ProjectCard';
 import { motion } from 'framer-motion';
 import { allProjects } from '../../helpers/allProjects';
+
 export const Projects = () => {
   return (
     <div className="flex h-full flex-col items-center justify-center px-4 pt-10 lg:pt-12">

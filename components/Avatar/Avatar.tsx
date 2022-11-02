@@ -13,6 +13,7 @@ const Avatar = () => {
       <Image
         className="h-auto w-full"
         alt="Hao"
+        priority={true}
         src={HaoAvaMemoji}
         placeholder="blur"
       />
