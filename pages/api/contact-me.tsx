@@ -7,7 +7,7 @@ import SparkPost from 'sparkpost';
 const UserInput = z.object({
   name: z.string().min(1).max(20),
   phoneNumber: z.string().nullable().optional().or(z.number().optional()),
-  email: z.string().email(),
+  email: z.string().email().min(1).max(30),
   message: z.string().min(1),
 });
 
@@ -49,8 +49,10 @@ const emailHandler: NextApiHandler = async (req, res) => {
       }
     } catch (e) {
       console.error(e);
-      if (e instanceof ZodError)
-        return res.status(400).json({ message: e.flatten().fieldErrors });
+      if (e instanceof ZodError) {
+        return res.status(400).json({ message: e.issues });
+      }
+
       if (e instanceof Error) {
         return res
           .status(404)

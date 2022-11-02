@@ -1,4 +1,5 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
+import { ZodError } from 'zod';
 import { FormInput } from '../components/Contact/ContactForm';
 
 /**
@@ -8,15 +9,23 @@ import { FormInput } from '../components/Contact/ContactForm';
  */
 export const sendEmail = async (formData: FormInput) => {
   try {
-    const response = await axios.post(
-      '/api/contact-me',
-      JSON.stringify(formData),
-      {
+    const response: AxiosResponse<{ message: string }, { message: string }> =
+      await axios.post('/api/contact-me', JSON.stringify(formData), {
         headers: { 'Content-Type': 'application/json' },
+      });
+    return response.data;
+  } catch (err) {
+    if (axios.isAxiosError(err)) {
+      if (Array.isArray(err.response?.data.message)) {
+        //Handle zod error
+        //https://zod.dev/?id=error-handling
+        throw new Error(
+          err.response?.data.message.map((e: ZodError) => e.message)
+        );
       }
-    );
-    return response;
-  } catch (error) {
-    console.error(error);
+      throw new Error(err.response?.data.message);
+    } else if (err instanceof Error) {
+      throw new Error(err.message);
+    }
   }
 };
