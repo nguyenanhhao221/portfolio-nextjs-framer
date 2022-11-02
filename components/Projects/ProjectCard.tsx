@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/future/image';
 import { z } from 'zod';
 import { TProjectType } from '../../helpers/allProjects';
-import { motion } from 'framer-motion';
 import { CodeBracketIcon, TvIcon } from '@heroicons/react/24/outline';
 type Props = {
   project: z.infer<typeof TProjectType>;
@@ -50,7 +49,7 @@ export const ProjectCard = ({ project, index, total }: Props) => {
           </a>
         </div>
         <div>
-          <motion.a
+          <a
             href={links.deployment}
             title="Live Demo"
             className="flex items-center gap-2 rounded-md p-2 underline decoration-gradient-purple-apple-from underline-offset-4 motion-safe:hover:scale-110"
@@ -59,7 +58,7 @@ export const ProjectCard = ({ project, index, total }: Props) => {
           >
             <TvIcon className="hidden h-4 w-4 md:block" />
             <p className="capitalize">live demo</p>
-          </motion.a>
+          </a>
         </div>
       </div>
     </div>

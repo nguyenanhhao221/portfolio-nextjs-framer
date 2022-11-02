@@ -1,12 +1,16 @@
 import type { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
+import { Suspense } from 'react';
 import { About } from '../components/About/About';
 import { Contact } from '../components/Contact/Contact';
 import { Header } from '../components/Header/Header';
 import { Hero } from '../components/Heros/Hero';
-import { Projects } from '../components/Projects/Projects';
 import { Skills } from '../components/Skills/Skills';
 
+const Projects = dynamic(() =>
+  import('../components/Projects/Projects').then((module) => module.Projects)
+);
 const Home: NextPage = () => {
   return (
     <>
@@ -45,7 +49,9 @@ const Home: NextPage = () => {
           id="projects"
           className="grid min-h-screen snap-none snap-proximity snap-start grid-cols-1 place-content-center px-2"
         >
-          <Projects />
+          <Suspense fallback={<></>}>
+            <Projects />
+          </Suspense>
         </section>
         <section
           id="contact"
