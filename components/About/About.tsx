@@ -16,7 +16,7 @@ export const About = () => {
       </div>
       <div className="mx-auto flex flex-col items-center gap-6 md:max-w-[80%] md:flex-row md:shadow-2xl">
         <motion.div
-          initial={{ opacity: 0, x: -200, scale: 0.5 }}
+          initial={{ opacity: 0, x: -200, scale: 0 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2 }}
@@ -28,8 +28,8 @@ export const About = () => {
           />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: 200, scale: 0.5 }}
-          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          initial={{ opacity: 0, x: 200 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2 }}
           className="flex h-full flex-col items-center gap-6 px-2 md:items-start md:justify-center md:gap-4 xl:text-lg"
