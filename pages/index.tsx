@@ -22,7 +22,7 @@ const Home: NextPage = () => {
 
       {/* Header */}
       <Header />
-      <main className="h-screen w-full snap-y snap-mandatory overflow-y-scroll scroll-smooth scrollbar-hide">
+      <main className="h-screen w-full snap-y snap-mandatory overflow-y-scroll scroll-smooth scrollbar-hide md:snap-proximity">
         {/* Hero */}
         <section
           id="hero"
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
         {/* Projects */}
         <section
           id="projects"
-          className="grid min-h-screen snap-none snap-proximity snap-start grid-cols-1 place-content-center px-2"
+          className="grid min-h-screen snap-proximity snap-start grid-cols-1 place-content-center px-2 md:snap-center md:snap-normal"
         >
           <Suspense fallback={<></>}>
             <Projects />
@@ -55,7 +55,7 @@ const Home: NextPage = () => {
         </section>
         <section
           id="contact"
-          className="grid min-h-screen snap-start snap-always grid-cols-1 place-content-center px-2"
+          className="grid min-h-screen snap-start snap-always grid-cols-1 place-content-center px-2 md:snap-center md:py-20"
         >
           <Contact />
         </section>

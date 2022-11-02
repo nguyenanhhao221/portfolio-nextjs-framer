@@ -15,8 +15,8 @@ export const Header = () => {
     <header className="fixed left-0 right-0 top-0 w-full p-4 backdrop-blur-sm ">
       <div className="mx-auto flex w-full items-center justify-between gap-2 xl:max-w-[80%]">
         <motion.ul
-          initial={{ x: -500, opacity: 0, scale: 0.5 }}
-          animate={{ x: 0, opacity: 1, scale: 1 }}
+          initial={{ x: -500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
           className="social-medias flex gap-1"
         >
@@ -72,12 +72,10 @@ export const Header = () => {
           initial={{
             x: 500,
             opacity: 0,
-            scale: 0.5,
           }}
           animate={{
             x: 0,
             opacity: 1,
-            scale: 1,
           }}
           transition={{ duration: 1 }}
           className="darkMode-toggle"

@@ -12,7 +12,7 @@ export const Projects = () => {
           Here are some of my highlighted projects. For more, please consider
           visit my{' '}
           <a
-            className="font-bold underline decoration-fuchsia-500 underline-offset-4"
+            className="font-bold underline decoration-fuchsia-500 underline-offset-4 transition-colors hover:text-white"
             target="_blank"
             href="https://github.com/nguyenanhhao221"
             rel="noopener noreferrer"
@@ -23,10 +23,9 @@ export const Projects = () => {
         </p>
       </div>
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
+        initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.5 }}
         className="carousel w-full lg:flex lg:justify-center"
       >
         <ul className="inner-carousel flex w-full snap-x snap-mandatory gap-4 overflow-y-hidden overflow-x-scroll overscroll-x-contain py-2  scrollbar-thin scrollbar-track-gray-700 scrollbar-thumb-gradient-purple-apple-via lg:grid lg:w-[80%] lg:grid-cols-2 lg:place-content-center lg:gap-16 xl:grid-cols-3">
