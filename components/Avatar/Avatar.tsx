@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/future/image';
 import HaoAvaMemoji from '../../public/Hao-Ava-Memoji.png';
 import { motion } from 'framer-motion';
+
 const Avatar = () => {
   return (
     <motion.div

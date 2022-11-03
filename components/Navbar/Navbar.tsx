@@ -14,10 +14,10 @@ export const Navbar = () => {
                     <Link href={'#about'}>about </Link>
                 </li>
                 <li className="p-1 text-center hover:border-b focus:border-b dark:text-gray-400">
-                    <Link href={'#skills'}>skills</Link>
+                    <Link href={'#projects'}>projects</Link>
                 </li>
                 <li className="p-1 text-center hover:border-b focus:border-b dark:text-gray-400">
-                    <Link href={'#projects'}>projects</Link>
+                    <Link href={'#skills'}>skills</Link>
                 </li>
                 <li className="p-1 text-center hover:border-b focus:border-b dark:text-gray-400">
                     <Link href={'#experience'}>experience</Link>

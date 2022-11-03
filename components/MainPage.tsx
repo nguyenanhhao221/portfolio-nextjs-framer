@@ -26,19 +26,19 @@ export const MainPage = () => {
         >
           <About />
         </section>
-        {/* Skills */}
-        <section
-          id="skills"
-          className="grid min-h-screen snap-center snap-always place-content-center px-2"
-        >
-          <Skills />
-        </section>
         {/* Projects */}
         <section
           id="projects"
           className="grid min-h-screen snap-start snap-always grid-cols-1 place-content-center px-2 lg:snap-proximity lg:snap-center lg:snap-normal"
         >
           <Projects />
+        </section>
+        {/* Skills */}
+        <section
+          id="skills"
+          className="grid min-h-screen snap-center snap-always place-content-center px-2"
+        >
+          <Skills />
         </section>
         <section
           id="contact"
