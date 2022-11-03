@@ -83,6 +83,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileColor" content="#333" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#333" />
+        <meta
+          name="google-site-verification"
+          content="2QFGCblztboH5eGR90dHpGIQzzjLRHccThfeFLYEO6w"
+        />
       </Head>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider attribute="class">
