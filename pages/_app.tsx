@@ -8,7 +8,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
   return (
-    //TODO fix support dark/light for firefox and safari
     <>
       <Head>
         <link
@@ -81,9 +80,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileColor" content="#333" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#333" />
       </Head>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider attribute="class">
