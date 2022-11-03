@@ -12,7 +12,7 @@ import Link from 'next/link';
 
 export const Header = () => {
   return (
-    <header className="fixed left-0 right-0 top-0 w-full p-4  ">
+    <header className="fixed left-0 right-0 top-0 w-full p-4 lg:backdrop-blur-sm">
       <div className="mx-auto flex w-full items-center justify-between gap-2 xl:max-w-[80%]">
         <motion.ul
           initial={{ x: -500, opacity: 0 }}
