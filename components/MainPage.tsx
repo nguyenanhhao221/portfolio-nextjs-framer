@@ -1,4 +1,5 @@
 import React from 'react';
+import { TProject } from '../types';
 import { About } from './About/About';
 import { Contact } from './Contact/Contact';
 import { Header } from './Header/Header';
@@ -6,7 +7,11 @@ import { Hero } from './Heros/Hero';
 import { Projects } from './Projects/Projects';
 import { Skills } from './Skills/Skills';
 
-export const MainPage = () => {
+type Props = {
+  projectData: TProject[] | false;
+};
+
+export const MainPage = ({ projectData }: Props) => {
   return (
     <>
       {/* Header */}
@@ -31,7 +36,11 @@ export const MainPage = () => {
           id="projects"
           className="grid min-h-screen snap-start snap-always grid-cols-1 place-content-center px-2 lg:snap-proximity lg:snap-center lg:snap-normal"
         >
-          <Projects />
+          {projectData ? (
+            <Projects projectData={projectData} />
+          ) : (
+            <div>Project Data Not Available</div>
+          )}
         </section>
         {/* Skills */}
         <section

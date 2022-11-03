@@ -1,6 +1,9 @@
 import axios, { AxiosResponse } from 'axios';
+import { groq } from 'next-sanity';
 import { ZodError } from 'zod';
 import { FormInput } from '../components/Contact/ContactForm';
+import { sanityClient } from '../sanity';
+import { TProject } from '../types';
 
 /**
  * Make post request to api with the user input contact to send email
@@ -26,6 +29,24 @@ export const sendEmail = async (formData: FormInput) => {
       throw new Error(err.response?.data.message);
     } else if (err instanceof Error) {
       throw new Error(err.message);
+    }
+  }
+};
+// TODO add docs
+/**
+ *
+ * @returns
+ */
+export const getProjects = async () => {
+  //Query for Sanity with Project
+  const query = groq`*[_type == 'projects']`;
+  try {
+    const response: TProject[] = await sanityClient.fetch(query);
+    if (response) return response;
+  } catch (err) {
+    console.error(err);
+    if (err instanceof Error) {
+      throw new Error('Data from Sanity is not available');
     }
   }
 };
