@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import Avatar from '../Avatar/Avatar';
-import { Navbar } from '../Navbar/Navbar';
+import Avatar from '../Avatar';
+import { Navbar } from '../Navbar';
 import TypeWriter from './TypeWriter';
 import BackgroundCircles from './BackgroundCircles';
 

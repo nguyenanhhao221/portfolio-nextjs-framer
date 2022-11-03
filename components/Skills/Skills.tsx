@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SectionTitle } from '../SectionTitle/SectionTitle';
+import { SectionTitle } from '../SectionTitle';
 import { TSkill } from '../../types';
 import { restructureSkillData } from '../../helpers/utils';
 import { SkillItem } from './SkillItem';

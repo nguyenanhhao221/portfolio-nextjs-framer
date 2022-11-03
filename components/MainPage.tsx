@@ -1,8 +1,8 @@
 import React from 'react';
 import { ProjectType, TSkill } from '../types';
-import { About } from './About/About';
+import { About } from './About';
 import { Contact } from './Contact/Contact';
-import { Header } from './Header/Header';
+import { Header } from './Header';
 import { Hero } from './Heros/Hero';
 import { Projects } from './Projects/Projects';
 import { Skills } from './Skills/Skills';

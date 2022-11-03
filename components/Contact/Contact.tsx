@@ -1,6 +1,6 @@
 import React from 'react';
 import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
-import { SectionTitle } from '../SectionTitle/SectionTitle';
+import { SectionTitle } from '../SectionTitle';
 import { ContactForm } from './ContactForm';
 
 export const Contact = () => {

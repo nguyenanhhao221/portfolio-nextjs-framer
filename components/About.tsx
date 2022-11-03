@@ -1,11 +1,11 @@
 import Image from 'next/future/image';
 import React from 'react';
-import HaoAva from '../../public/Hao-Ava.jpg';
-import { CTAButtons } from '../CTAButtons/CTAButtons';
+import HaoAva from '../public/Hao-Ava.jpg';
+import { CTAButtons } from './CTAButtons';
 import { DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
-import { SectionTitle } from '../SectionTitle/SectionTitle';
-import { Quotes } from '../Quotes/Quotes';
+import { SectionTitle } from './SectionTitle';
+import { Quotes } from './Quotes';
 
 export const About = () => {
   return (
