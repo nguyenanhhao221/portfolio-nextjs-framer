@@ -1,10 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
-import { groq } from 'next-sanity';
 import { ZodError } from 'zod';
 import { FormInput } from '../components/Contact/ContactForm';
 import { sanityClient } from '../sanity';
-import { TProject } from '../types';
-
+import type { TSkill } from '../types';
 /**
  * Make post request to api with the user input contact to send email
  * @param formData The form data with user input
@@ -32,16 +30,10 @@ export const sendEmail = async (formData: FormInput) => {
     }
   }
 };
-// TODO add docs
-/**
- *
- * @returns
- */
-export const getProjects = async () => {
-  //Query for Sanity with Project
-  const query = groq`*[_type == 'projects']`;
+
+export const getSanity = async (queryString: string) => {
   try {
-    const response: TProject[] = await sanityClient.fetch(query);
+    const response = await sanityClient.fetch(queryString);
     if (response) return response;
   } catch (err) {
     console.error(err);
@@ -49,4 +41,19 @@ export const getProjects = async () => {
       throw new Error('Data from Sanity is not available');
     }
   }
+};
+
+/**
+ * Help to restructure the data get back from Sanity on Skills Data.
+ * Find unique category from the raw data, base on that merge together each skill that have the same unique category
+ * @param skillArr The data on Skills section from Sanity
+ * @returns a new Array with each element is an object merge by the category key
+ */
+export const restructureSkillData = (skillArr: TSkill[]) => {
+  const uniqueCategory = [...new Set(skillArr.map((skill) => skill.category))];
+  const result = uniqueCategory.map((category) => {
+    const data = skillArr.filter((skill) => skill.category === category);
+    return { category: category, data };
+  });
+  return result;
 };

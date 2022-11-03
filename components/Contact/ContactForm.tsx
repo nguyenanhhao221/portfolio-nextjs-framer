@@ -2,7 +2,7 @@ import { ArrowPathIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline';
 import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useMutation } from '@tanstack/react-query';
-import { sendEmail } from '../../helpers/requests';
+import { sendEmail } from '../../helpers/utils';
 import dynamic from 'next/dynamic';
 
 //Load popup dynamically and not on the server since we only need this component when user submit form

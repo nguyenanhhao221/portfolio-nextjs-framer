@@ -22,19 +22,26 @@ export const ProjectCard = ({ project, index, total }: Props) => {
   } = project;
   const imageProps = useNextSanityImage(sanityClient, projectImage);
   return (
-    <div className="flex h-full w-full flex-col items-center gap-2 md:gap-4">
-      <h3 className="font-bold tracking-widest underline underline-offset-8 lg:hidden">
-        Case study: {index + 1} of {total}
-      </h3>
-      <h2 className="text-center text-xl font-bold capitalize tracking-widest lg:hidden lg:py-2 lg:text-3xl">
-        {projectName}
-      </h2>
-      <div>
+    <div className="flex h-full w-full flex-col items-center justify-between gap-2 md:gap-4">
+      <a
+        href={projectLiveLink}
+        target="_blank"
+        className="flex flex-col"
+        rel="noreferrer noopener"
+      >
+        <h3 className="text-center font-bold tracking-widest underline underline-offset-8 lg:hidden">
+          Case study: {index + 1} of {total}
+        </h3>
+        <h2 className="inline-block p-4 text-center text-xl font-bold uppercase  tracking-[10px] lg:order-2   lg:text-3xl">
+          {projectName}
+        </h2>
+
         <motion.div
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ type: 'spring', bounce: 0.4 }}
-          className="h-44 w-full overflow-hidden md:h-[400px]"
+          viewport={{ once: true }}
+          className="h-44 w-full overflow-hidden md:h-[400px] lg:order-1"
         >
           <Image
             className="h-full w-full rounded-lg object-fill object-center"
@@ -42,13 +49,11 @@ export const ProjectCard = ({ project, index, total }: Props) => {
             {...imageProps}
           ></Image>
         </motion.div>
-        <h2 className="hidden text-center text-xl font-bold capitalize tracking-widest lg:block lg:py-4 lg:text-3xl">
-          {projectName}
-        </h2>
-        <p className="pt-1 text-center text-sm text-slate-400 md:text-base lg:px-4 lg:py-4 lg:text-lg">
+
+        <p className="pt-1 text-center text-sm text-slate-400 md:text-base lg:order-3 lg:px-4 lg:py-4 lg:text-lg">
           {projectSummary}
         </p>
-      </div>
+      </a>
       <div className="flex gap-2 py-2">
         <div className="h-full">
           <a

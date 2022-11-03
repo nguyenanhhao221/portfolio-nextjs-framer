@@ -14,3 +14,12 @@ export const ProjectType = TSanityBase.extend({
   projectSummary: z.string().min(1),
 });
 export type TProject = z.infer<typeof ProjectType>;
+
+export const SkillType = TSanityBase.extend({
+  category: z.string().min(1),
+  image: z.string(),
+  link: z.string().url(),
+  skills: z.string().min(1),
+});
+
+export type TSkill = z.infer<typeof SkillType>;

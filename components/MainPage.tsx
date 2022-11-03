@@ -1,17 +1,19 @@
 import React from 'react';
-import { TProject } from '../types';
+import { ProjectType, TSkill } from '../types';
 import { About } from './About/About';
 import { Contact } from './Contact/Contact';
 import { Header } from './Header/Header';
 import { Hero } from './Heros/Hero';
 import { Projects } from './Projects/Projects';
 import { Skills } from './Skills/Skills';
+import { z } from 'zod';
 
 type Props = {
-  projectData: TProject[] | false;
+  projectData: z.infer<typeof ProjectType>[] | false;
+  skillData: TSkill[] | false;
 };
 
-export const MainPage = ({ projectData }: Props) => {
+export const MainPage = ({ projectData, skillData }: Props) => {
   return (
     <>
       {/* Header */}
@@ -47,7 +49,7 @@ export const MainPage = ({ projectData }: Props) => {
           id="skills"
           className="grid min-h-screen snap-center snap-always place-content-center px-2"
         >
-          <Skills />
+          {skillData ? <Skills skillData={skillData} /> : <></>}
         </section>
         <section
           id="contact"

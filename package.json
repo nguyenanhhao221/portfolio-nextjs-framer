@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sanity-studio": "cd sanity/ && sanity start"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.3",
@@ -33,6 +34,7 @@
     "zod": "^3.19.1"
   },
   "devDependencies": {
+    "@sanity/types": "^2.35.0",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.7",
     "@types/node": "18.11.0",

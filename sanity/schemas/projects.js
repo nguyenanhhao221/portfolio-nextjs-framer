@@ -1,4 +1,4 @@
-export default {
+export const projectsSchema = {
   name: 'projects',
   type: 'document',
   title: 'Projects',
@@ -11,7 +11,7 @@ export default {
     },
     {
       name: 'projectSummary',
-      type: 'string',
+      type: 'text',
       title: 'Summary',
     },
     {
