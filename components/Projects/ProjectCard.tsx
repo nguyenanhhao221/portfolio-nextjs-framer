@@ -22,7 +22,7 @@ export const ProjectCard = ({ project, index, total }: Props) => {
   } = project;
   const imageProps = useNextSanityImage(sanityClient, projectImage);
   return (
-    <div className="flex h-full w-full flex-col items-center justify-between gap-2 md:gap-4">
+    <div className="flex h-full w-full flex-col items-center gap-2 md:gap-4 lg:justify-between">
       <a
         href={projectLiveLink}
         target="_blank"
@@ -32,7 +32,7 @@ export const ProjectCard = ({ project, index, total }: Props) => {
         <h3 className="text-center font-bold tracking-widest underline underline-offset-8 lg:hidden">
           Case study: {index + 1} of {total}
         </h3>
-        <h2 className="inline-block p-4 text-center text-xl font-bold uppercase  tracking-[10px] lg:order-2   lg:text-3xl">
+        <h2 className="inline-block p-4 text-center text-xl font-bold uppercase  tracking-[10px] lg:order-2 lg:text-3xl">
           {projectName}
         </h2>
 
