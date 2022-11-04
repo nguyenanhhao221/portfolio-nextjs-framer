@@ -33,11 +33,11 @@ const Home = ({
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.haonguyen.tech" />
+        <meta property="og:url" content="https://haonguyen.tech" />
         <meta property="og:image:type" content="image/png" />
         <meta name="robots" content="index, follow" />
         <title>Hao Portfolio</title>
-        <link rel="canonical" href="https://www.haonguyen.tech" />
+        <link rel="canonical" href="https://haonguyen.tech" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainPage projectData={projectData} skillData={skillData} />
