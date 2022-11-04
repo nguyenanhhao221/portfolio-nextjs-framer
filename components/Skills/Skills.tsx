@@ -20,11 +20,13 @@ export const Skills = ({ skillData }: Props) => {
       },
     },
   };
-  //Because the raw Data about Skills in Sanity is a bit messy so Final data shape we want
-  //[
-  //   { category: 'front-end', data: [] },
-  //   { category: 'back-end', data: [] },
-  // ];
+  /*   
+  Because the raw Data about Skills in Sanity is a bit messy so Final data shape we want
+  [
+    { category: 'front-end', data: [] },
+    { category: 'back-end', data: [] },
+  ];
+   */
   const sortedData = restructureSkillData(skillData);
   //Motion variants
   const itemMotion = {
