@@ -63,7 +63,7 @@ export const getStaticProps: GetStaticProps<{
   });
 
   await queryClient.prefetchQuery(['getProjects'], () =>
-    getSanity(groq`*[_type == 'projects']`)
+    getSanity(groq`*[_type == 'projects'] | order(_createdAt asc)`)
   );
   await queryClient.prefetchQuery(['getSkills'], () =>
     getSanity(groq`*[_type == 'skills'] | order(_createdAt asc)`)
