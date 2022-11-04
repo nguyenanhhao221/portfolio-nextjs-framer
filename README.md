@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hao Nguyen's Personal Portfolio Website
 
-## Getting Started
+![Manage Landing Page Images](./public/portfolioImg.png)
 
-First, run the development server:
+## Motivation
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This project is created as a chance for me to showcase my projects as a Web developers and also a chance for me to practice some cool technologies I haven't used before such as: Framer Motion, SparkPost and Sanity IO
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Thank you Sonny Sangha for the inspiration. Check out his video [here](https://www.youtube.com/watch?v=urgi2iz9P6U)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Description
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Fully responsive with some cool animations personal portfolio website.
+Built with:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Technologies:
 
-## Learn More
+* NextJS
+* Typescript
+* ReactJS
+* TailwindCSS
+* Framer Motion
+* React - Query / Tan Stack
+* Sanity IO
+* SpartPost
+* zod
 
-To learn more about Next.js, take a look at the following resources:
+---
+The Project is built mainly use NextJS with ReactJS together with animation from Framer Motion and CSS is done by TailwindCSS.
+Thanks to NextJS Server Side Rendering or in this case incremental static regeneration the page is prebuilt on the server and will helps a lot in loading time for the visitor
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Sanity IO provided a CMS system that I used in the `Projects` section and the `Skills` section. In the future if I can easily update these section if needed
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Framer Motion is used for cool animation of the pages. Even though it quite heavy, but I'm looking into reduce the JavaScript bundle with their `LazyMotion`
 
-## Deploy on Vercel
+There is also a api end point `/api/contact-me` together with `SparkPost` to handle sending email from the `Contact` form to my personal email. The form is validate from the front end with `react-hook-forms` and validate again on the server with `zod`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Challenges
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The Framer Motion can cause some weird layout shift if not using carefully so using the `initial` with `opacity:0` and for example `x:200` it might cause layout shift when the component is in the viewport, since technically when that component is mounted the has the initial position of `x:200` but since we set `opacity:0` visually, we cannot see that.
+
+If there is an Image component exist in the viewport when user first load the page, in my case is the Apple Animoji avatar in the Hero section, the loading time for 3G or slow 4G time in Mobile is not that good.
+
+That's why I have been able to get quite good result for Lighthouse test on Desktop but not that good on Slow Mobile. Also factoring in the heavy JS bundle that Framer motion might cause.
