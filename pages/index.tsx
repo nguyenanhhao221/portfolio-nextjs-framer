@@ -31,6 +31,9 @@ const Home = ({
           property="og:image:alt"
           content="Website on display with laptop, mobile, tablet"
         />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.haonguyen.tech" />
         <meta property="og:image:type" content="image/png" />
         <meta name="robots" content="index, follow" />
         <title>Hao Portfolio</title>
