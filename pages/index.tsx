@@ -14,16 +14,26 @@ const Home = ({
   return (
     <>
       <Head>
-        <title>Hao Portfolio</title>
+        <meta name="og:title" content="Hao Nguyen Personal Portfolio" />
         <meta
           name="description"
-          content="Hao Nguyen - Front End Developer Personal Portfolio"
+          content="Hi my name is Hao Nguyen.I'm a front-end developer based in Vietnam Welcome to my portfolio"
+        />
+        <meta
+          name="og:description"
+          content="Hi my name is Hao Nguyen.I'm a front-end developer based in Vietnam Welcome to my portfolio"
         />
         <meta
           property="og:image"
           content="https://cdn.sanity.io/images/lnyy2568/production/efd4bddda3c74c14824ca7da019521ec3ceefb30-3000x2000.png"
         />
+        <meta
+          property="og:image:alt"
+          content="Website on display with laptop, mobile, tablet"
+        />
+        <meta property="og:image:type" content="image/png" />
         <meta name="robots" content="index, follow" />
+        <title>Hao Portfolio</title>
         <link rel="canonical" href="https://www.haonguyen.tech" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

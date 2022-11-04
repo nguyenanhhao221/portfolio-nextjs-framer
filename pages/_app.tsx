@@ -80,9 +80,18 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="msapplication-TileColor" content="#333" />
+        <meta name="msapplication-TileColor" content="black" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#333" />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: dark)"
+          content="black"
+        />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: light)"
+          content="light"
+        />
         <meta
           name="google-site-verification"
           content="2QFGCblztboH5eGR90dHpGIQzzjLRHccThfeFLYEO6w"
