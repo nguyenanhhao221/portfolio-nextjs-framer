@@ -101,12 +101,12 @@ export const ContactForm = () => {
         />
         <label htmlFor="tel">Phone Number</label>
         <input
-          {...register('phoneNumber')}
+          {...register('phoneNumber', { required: false })}
           className={`${errors.phoneNumber ? errorStyle : inputStyle} `}
           autoComplete="tel"
           type="tel"
           id="tel"
-          name="tel"
+          name="phoneNumber"
         />
 
         <label htmlFor="message">Message*</label>

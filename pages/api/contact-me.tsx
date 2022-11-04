@@ -35,7 +35,7 @@ const emailHandler: NextApiHandler = async (req, res) => {
           <p>${message}</p>
           <span >From: ${email}</span>
           <br />
-          <span>Phone Number:${phoneNumber}</span>
+          <span>Phone Number: ${phoneNumber}</span>
           </body>
           </html>`,
           },

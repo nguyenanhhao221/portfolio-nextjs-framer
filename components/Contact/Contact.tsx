@@ -15,7 +15,7 @@ export const Contact = () => {
           <EnvelopeIcon className="inline h-6 w-6" />{' '}
           <a href="mailto: me@haonguyen.tech">me@haonguyen.tech</a>
         </p>
-        <address className="cursor-default not-italic">
+        <address className="hidden cursor-default not-italic md:block">
           <MapPinIcon className="inline h-6 w-6" />
           Ho Chi Minh City, Vietnam 🇻🇳
         </address>
