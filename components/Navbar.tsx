@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 export const Navbar = () => {
   return (
-    <motion.nav
+    <m.nav
       className="mt-4"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -23,6 +23,6 @@ export const Navbar = () => {
           <Link href={'#contact'}>contact</Link>
         </li>
       </ul>
-    </motion.nav>
+    </m.nav>
   );
 };

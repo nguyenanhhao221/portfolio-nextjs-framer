@@ -4,7 +4,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 type Props = {
   status: { success: boolean; message: string };
@@ -15,7 +15,7 @@ type Props = {
 export const Popup = ({ status, setOpenPopup, openPopup }: Props) => {
   const { message, success } = status;
   return openPopup ? (
-    <motion.div
+    <m.div
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       className="fixed inset-0 grid grid-cols-1 place-content-center backdrop-blur-sm"
@@ -48,7 +48,7 @@ export const Popup = ({ status, setOpenPopup, openPopup }: Props) => {
           </div>
         </>
       </div>
-    </motion.div>
+    </m.div>
   ) : (
     <></>
   );

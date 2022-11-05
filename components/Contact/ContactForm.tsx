@@ -127,7 +127,7 @@ export const ContactForm = () => {
         <button
           type="submit"
           title="Send Message"
-          className="flex w-full items-center justify-center gap-2 self-center rounded-lg bg-gradient-to-r from-gradient-purple-apple-from via-gradient-purple-apple-via to-gradient-purple-apple-to py-1 text-center text-xl font-bold md:mt-10 md:w-[50%] md:rounded-xl md:py-4"
+          className="mb-8 flex w-full items-center justify-center gap-2 self-center rounded-lg bg-gradient-to-r from-gradient-purple-apple-from via-gradient-purple-apple-via to-gradient-purple-apple-to py-1 text-center text-xl font-bold md:w-[50%] md:rounded-xl md:py-4"
           disabled={isLoading}
         >
           {isLoading ? (

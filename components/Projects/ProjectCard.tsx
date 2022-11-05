@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Image from 'next/future/image';
 import { CodeBracketIcon, TvIcon } from '@heroicons/react/24/outline';
 import { TProject } from '../../types';
@@ -34,7 +34,7 @@ export const ProjectCard = ({ project, index, total }: Props) => {
           {projectName}
         </h2>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           whileInView={{ scale: [0, 1], opacity: [0, 1] }}
           transition={{ type: 'spring', bounce: 0.4, delay: 0.3 }}
@@ -47,7 +47,7 @@ export const ProjectCard = ({ project, index, total }: Props) => {
             width={3840}
             height={2095}
           ></Image>
-        </motion.div>
+        </m.div>
 
         <p className="pt-1 text-center text-sm text-gray-200 md:text-base lg:order-3 lg:px-4 lg:py-4 lg:text-lg">
           {projectSummary}

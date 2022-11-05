@@ -3,7 +3,7 @@ import React from 'react';
 import HaoAva from '../public/Hao-Ava.jpg';
 import { CTAButtons } from './CTAButtons';
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { SectionTitle } from './SectionTitle';
 import { Quotes } from './Quotes';
 
@@ -18,7 +18,7 @@ export const About = () => {
         <div className="img-bg-blur-desktop absolute -z-10 hidden h-full w-full animate-pulse rounded-md bg-gradient-to-tl from-gradient-blue-apple-via to-gradient-purple-apple-to opacity-50 blur-3xl md:flex md:items-center">
           <div className="h-1/2 w-full bg-black bg-opacity-70"></div>
         </div>
-        <motion.div
+        <m.div
           whileInView={{ opacity: [0, 1], x: [200, 0] }}
           viewport={{ once: true }}
           transition={{ duration: 1.2 }}
@@ -31,8 +31,8 @@ export const About = () => {
             src={HaoAva}
             placeholder="blur"
           />
-        </motion.div>
-        <motion.div
+        </m.div>
+        <m.div
           initial={{ opacity: 0, x: -200 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -66,7 +66,7 @@ export const About = () => {
             Icon={ArrowDownCircleIcon}
             className="group rounded-md bg-gradient-purple-apple-from text-center text-sm transition-colors hover:bg-gradient-purple-apple-to hover:text-white sm:text-base"
           />
-        </motion.div>
+        </m.div>
       </div>
     </div>
   );

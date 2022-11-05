@@ -11,7 +11,7 @@ export const Contact = () => {
         <h2 className="text-center text-xl duration-200 ease-in-out motion-safe:animate-bounce">
           Let{"'"}s Chat
         </h2>
-        <p>
+        <p className="xs:block hidden">
           <EnvelopeIcon className="inline h-6 w-6" />{' '}
           <a href="mailto: me@haonguyen.tech">me@haonguyen.tech</a>
         </p>

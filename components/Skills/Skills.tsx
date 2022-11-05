@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { SectionTitle } from '../SectionTitle';
 import { TSkill } from '../../types';
 import { restructureSkillData } from '../../helpers/utils';
@@ -43,7 +43,7 @@ export const Skills = ({ skillData }: Props) => {
             key={skill.category}
             className="space-y-2 rounded-lg border-gray-900 bg-slate-800 bg-opacity-10 shadow-2xl  md:p-4"
           >
-            <motion.h2
+            <m.h2
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -52,8 +52,8 @@ export const Skills = ({ skillData }: Props) => {
               className="hover:shadow-highlight-blue inline-block font-bold capitalize tracking-widest md:text-xl"
             >
               {skill.category}:
-            </motion.h2>
-            <motion.ul
+            </m.h2>
+            <m.ul
               variants={listMotion}
               initial={'hidden'}
               whileInView={'visible'}
@@ -61,15 +61,15 @@ export const Skills = ({ skillData }: Props) => {
               className="flex flex-row flex-wrap justify-center gap-1 py-1 sm:gap-2 md:gap-8 lg:gap-10"
             >
               {skill.data.map((eachSkill) => (
-                <motion.li
+                <m.li
                   key={eachSkill._id}
                   variants={itemMotion}
                   className="group"
                 >
                   <SkillItem skill={eachSkill} />
-                </motion.li>
+                </m.li>
               ))}
-            </motion.ul>
+            </m.ul>
           </div>
         ))}
       </div>

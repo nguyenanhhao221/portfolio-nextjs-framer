@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import React from 'react';
 import Avatar from '../Avatar';
 import { Navbar } from '../Navbar';
@@ -10,7 +10,7 @@ const Hero = () => {
     <div className="flex h-full w-full flex-col items-center justify-center gap-1  text-center">
       <Avatar />
       <BackgroundCircles />
-      <motion.div
+      <m.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
@@ -22,7 +22,7 @@ const Hero = () => {
             Front-end Developer
           </span>
         </h1>
-      </motion.div>
+      </m.div>
       <TypeWriter />
       <Navbar />
     </div>

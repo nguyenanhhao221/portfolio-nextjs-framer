@@ -1,7 +1,7 @@
 import React from 'react';
 import { SectionTitle } from '../SectionTitle';
 import { ProjectCard } from './ProjectCard';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { ProjectType } from '../../types';
 import { z } from 'zod';
 type Props = {
@@ -27,7 +27,7 @@ export const Projects = ({ projectData }: Props) => {
           </a>
         </p>
       </div>
-      <motion.div
+      <m.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -47,7 +47,7 @@ export const Projects = ({ projectData }: Props) => {
             </li>
           ))}
         </ul>
-      </motion.div>
+      </m.div>
     </div>
   );
 };

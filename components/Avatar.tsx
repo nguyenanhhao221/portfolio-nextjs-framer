@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/future/image';
 import HaoAvaMemoji from '../public/Hao-Ava-Memoji.png';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const Avatar = () => {
   return (
-    <motion.div
+    <m.div
       animate={{ opacity: [0, 1], scale: [0, 1] }}
       transition={{ duration: 1 }}
       className="w-24"
@@ -17,7 +17,7 @@ const Avatar = () => {
         src={HaoAvaMemoji}
         placeholder="blur"
       />
-    </motion.div>
+    </m.div>
   );
 };
 
