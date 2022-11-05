@@ -5,7 +5,8 @@
   "include": [
     "./node_modules/@sanity/base/types/**/*.ts",
     "./**/*.ts",
-    "./**/*.tsx"
+    "./**/*.tsx",
+    "sanity.js"
   ],
   "compilerOptions": {
     "target": "es5",

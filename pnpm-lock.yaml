@@ -27,7 +27,6 @@ specifiers:
   framer-motion: ^7.5.3
   next: 12.3.1
   next-sanity: ^1.0.3
-  next-sanity-image: ^4.1.0
   postcss: ^8.4.18
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
@@ -57,7 +56,6 @@ dependencies:
   framer-motion: 7.5.3_biqbaboplfbrettd7655fr4n2y
   next: 12.3.1_biqbaboplfbrettd7655fr4n2y
   next-sanity: 1.0.3_next@12.3.1+react@18.2.0
-  next-sanity-image: 4.1.0_yn4i7wuoydcdzx7evibvatyq3e
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.38.0_react@18.2.0
@@ -2382,19 +2380,6 @@ packages:
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
-
-  /next-sanity-image/4.1.0_yn4i7wuoydcdzx7evibvatyq3e:
-    resolution: {integrity: sha512-DOKqiVJjGQb/FGPA5e5ezVK326w1GFx28J0XFt8XMtaaWzRfYdPQlkUhJdTDIAPIMMwQQwAmSxxA0r2rQpKigg==}
-    peerDependencies:
-      '@sanity/client': ^3.0.0
-      next: ^11.0.0 || ^12.0.0
-      react: ^17.0.0 || ^18.0.0
-    dependencies:
-      '@sanity/client': 3.4.1
-      '@sanity/image-url': 1.0.1
-      next: 12.3.1_biqbaboplfbrettd7655fr4n2y
-      react: 18.2.0
-    dev: false
 
   /next-sanity/1.0.3_next@12.3.1+react@18.2.0:
     resolution: {integrity: sha512-9THbeAUGA3REPeLxEK4x9a4/k5WVK6gXU11kX2+zaP9Z2Q4cc5vcI0SglUrZ4FWeVXquLuULtC/iiO5p67LDhw==}

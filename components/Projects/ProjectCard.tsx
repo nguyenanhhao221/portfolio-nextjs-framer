@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/future/image';
 import { CodeBracketIcon, TvIcon } from '@heroicons/react/24/outline';
 import { TProject } from '../../types';
-import { useNextSanityImage } from 'next-sanity-image';
-import { sanityClient } from '../../sanity';
+import { urlFor } from '../../lib/sanity';
 
 type Props = {
   project: TProject;
@@ -20,7 +19,6 @@ export const ProjectCard = ({ project, index, total }: Props) => {
     projectLiveLink,
     projectImage,
   } = project;
-  const imageProps = useNextSanityImage(sanityClient, projectImage);
   return (
     <div className="flex h-full w-full flex-col items-center gap-2 md:gap-4 lg:justify-between">
       <a
@@ -29,9 +27,9 @@ export const ProjectCard = ({ project, index, total }: Props) => {
         className="flex flex-col"
         rel="noreferrer noopener"
       >
-        <h3 className="text-center font-bold tracking-widest underline underline-offset-8 lg:hidden">
+        <p className="text-center font-bold tracking-widest underline underline-offset-8 lg:hidden">
           Case study: {index + 1} of {total}
-        </h3>
+        </p>
         <h2 className="inline-block p-4 text-center text-xl font-bold uppercase tracking-wide md:tracking-[10px] lg:order-2 lg:text-3xl">
           {projectName}
         </h2>
@@ -44,7 +42,9 @@ export const ProjectCard = ({ project, index, total }: Props) => {
           <Image
             className="h-full w-full rounded-lg object-fill object-center"
             alt={projectName}
-            {...imageProps}
+            src={urlFor(projectImage).url()}
+            width={3840}
+            height={2095}
           ></Image>
         </motion.div>
 

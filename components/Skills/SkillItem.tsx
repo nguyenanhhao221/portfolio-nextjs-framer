@@ -1,16 +1,14 @@
 import React from 'react';
-import { useNextSanityImage } from 'next-sanity-image';
-import { sanityClient } from '../../sanity';
 import { TSkill } from '../../types';
 import Image from 'next/future/image';
 
+import { urlFor } from '../../lib/sanity';
 type Props = {
   skill: TSkill;
 };
 
 export const SkillItem = ({ skill }: Props) => {
   const { link, skills, image } = skill;
-  const imageProps = useNextSanityImage(sanityClient, image);
   return (
     <>
       <a
@@ -19,8 +17,10 @@ export const SkillItem = ({ skill }: Props) => {
         title={`Go to ${skills} homepage`}
       >
         <Image
-          {...imageProps}
+          src={urlFor(image).url()}
           alt={`${skills}`}
+          width={512}
+          height={512}
           className="h-8 w-8 object-contain object-center transition-all md:h-10 md:w-10 md:motion-safe:group-hover:scale-125 lg:h-16 lg:w-16"
         />
         <span className="break-words text-center text-xs italic tracking-wide dark:text-gray-200 md:text-sm md:motion-safe:group-hover:scale-125">

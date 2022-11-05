@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import { ZodError } from 'zod';
 import { FormInput } from '../components/Contact/ContactForm';
-import { sanityClient } from '../sanity';
+import { sanityClient } from '../lib/sanity.server';
 import type { TSkill } from '../types';
 /**
  * Make post request to api with the user input contact to send email
