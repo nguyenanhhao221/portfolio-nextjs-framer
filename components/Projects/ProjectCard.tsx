@@ -32,7 +32,7 @@ export const ProjectCard = ({ project, index, total }: Props) => {
         <h3 className="text-center font-bold tracking-widest underline underline-offset-8 lg:hidden">
           Case study: {index + 1} of {total}
         </h3>
-        <h2 className="inline-block p-4 text-center text-xl font-bold uppercase  tracking-[10px] lg:order-2 lg:text-3xl">
+        <h2 className="inline-block p-4 text-center text-xl font-bold uppercase tracking-wide md:tracking-[10px] lg:order-2 lg:text-3xl">
           {projectName}
         </h2>
 

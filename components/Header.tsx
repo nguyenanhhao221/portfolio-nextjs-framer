@@ -12,7 +12,7 @@ import Link from 'next/link';
 
 export const Header = () => {
   return (
-    <header className="fixed left-0 right-0 top-0 w-full p-4 lg:backdrop-blur-sm">
+    <header className="fixed left-0 right-0 top-0 w-full p-1 sm:p-4 lg:backdrop-blur-sm">
       <motion.div
         initial={{ x: -500, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}

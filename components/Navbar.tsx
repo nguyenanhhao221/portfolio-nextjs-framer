@@ -20,7 +20,7 @@ export const Navbar = () => {
           <Link href={'#skills'}>skills</Link>
         </li>
         <li className="p-1 text-center focus:border-b hover:border-b dark:text-gray-400">
-          <Link href={'#Contact'}>contact</Link>
+          <Link href={'#contact'}>contact</Link>
         </li>
       </ul>
     </motion.nav>
