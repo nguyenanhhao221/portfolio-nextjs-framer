@@ -15,7 +15,7 @@ export const About = () => {
         <Quotes />
       </div>
       <div className="mx-auto flex flex-col items-center gap-6 md:relative md:z-0 md:flex-row md:items-stretch md:rounded-lg md:border md:border-stone-900 md:shadow-2xl lg:max-w-[70%]">
-        <div className="img-bg-blur absolute -z-10 h-full w-full animate-pulse rounded-md bg-gradient-to-tl from-gradient-blue-apple-via to-gradient-purple-apple-to opacity-50 blur-3xl md:flex md:items-center">
+        <div className="img-bg-blur-desktop absolute -z-10 hidden h-full w-full animate-pulse rounded-md bg-gradient-to-tl from-gradient-blue-apple-via to-gradient-purple-apple-to opacity-50 blur-3xl md:flex md:items-center">
           <div className="h-1/2 w-full bg-black bg-opacity-70"></div>
         </div>
         <motion.div
@@ -25,7 +25,7 @@ export const About = () => {
           transition={{ duration: 1.2 }}
           className="relative flex h-full flex-col items-center justify-center md:static md:flex-none"
         >
-          <div className="img-bg-blur -z-1 absolute h-52 w-52 animate-pulse rounded-full bg-gradient-to-tr from-gradient-blue-apple-via to-gradient-purple-apple-to opacity-50 blur-3xl md:hidden md:h-0 md:w-0"></div>
+          <div className="img-bg-blur-mobile -z-1 absolute h-52 w-52 animate-pulse rounded-full bg-gradient-to-tr from-gradient-blue-apple-via to-gradient-purple-apple-to opacity-50 blur-3xl md:hidden md:h-0 md:w-0"></div>
           <Image
             className="h-48 w-48 rounded-full object-cover object-center backdrop-blur-md md:h-auto md:max-w-sm md:basis-1/3 md:rounded-md"
             alt="Hao"
