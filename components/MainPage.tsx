@@ -22,14 +22,14 @@ export const MainPage = ({ projectData, skillData }: Props) => {
         {/* Hero */}
         <section
           id="hero"
-          className="flex min-h-screen snap-start snap-always items-center justify-center overflow-hidden px-2"
+          className="flex h-screen snap-start snap-always items-center justify-center overflow-hidden px-2"
         >
           <Hero />
         </section>
         {/* About */}
         <section
           id="about"
-          className="flex min-h-screen snap-center snap-always items-center justify-center px-2"
+          className="flex h-screen snap-center snap-always items-center justify-center px-2"
         >
           <About />
         </section>
@@ -53,7 +53,7 @@ export const MainPage = ({ projectData, skillData }: Props) => {
         </section>
         <section
           id="contact"
-          className="grid min-h-screen snap-start snap-always grid-cols-1 place-content-center px-2 md:snap-center md:py-20"
+          className="grid snap-start snap-always grid-cols-1 place-content-center px-2 md:snap-center"
         >
           <Contact />
         </section>

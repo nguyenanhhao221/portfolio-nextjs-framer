@@ -39,7 +39,7 @@ export const About = () => {
           transition={{ duration: 1.2 }}
           className="flex h-full flex-col items-center gap-6 py-1 px-2 md:col-span-2 md:items-start md:justify-center md:gap-4 md:py-4  xl:text-lg"
         >
-          <p className="text-center font-serif text-xs font-light sm:text-sm md:max-w-[90%] md:text-left md:leading-[25px] lg:text-lg xl:leading-[40px]">
+          <p className="xs:text-sm text-center font-serif text-xs font-light md:max-w-[90%] md:text-left md:leading-[25px] lg:text-lg xl:leading-[40px]">
             I&apos;m a 27 years old Front-End Developer based in Vietnam. 🇻🇳
             <br />I have been falling in love with coding ever since I found out
             the amazing things you can do with just a few line of code.
@@ -64,7 +64,7 @@ export const About = () => {
             btnTitle="My Projects"
             href="#projects"
             Icon={ArrowDownCircleIcon}
-            className="group rounded-md bg-gradient-purple-apple-via text-center ring-1 ring-gradient-purple-apple-from transition-colors hover:bg-gradient-purple-apple-from hover:text-white"
+            className="group rounded-md bg-gradient-purple-apple-from text-center text-sm transition-colors hover:bg-gradient-purple-apple-to hover:text-white sm:text-base"
           />
         </motion.div>
       </div>

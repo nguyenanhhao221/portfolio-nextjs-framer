@@ -48,7 +48,7 @@ export const ProjectCard = ({ project, index, total }: Props) => {
           ></Image>
         </motion.div>
 
-        <p className="pt-1 text-center text-sm text-slate-400 md:text-base lg:order-3 lg:px-4 lg:py-4 lg:text-lg">
+        <p className="pt-1 text-center text-sm text-gray-200 md:text-base lg:order-3 lg:px-4 lg:py-4 lg:text-lg">
           {projectSummary}
         </p>
       </a>

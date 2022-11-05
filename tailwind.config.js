@@ -8,6 +8,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screen: {
+        screens: {
+          xs: '350px',
+          ...defaultTheme.screens,
+        },
+      },
       colors: {
         '5b-yellow': '#ffb400',
         'gradient-purple-apple-from': '#8727ff',
