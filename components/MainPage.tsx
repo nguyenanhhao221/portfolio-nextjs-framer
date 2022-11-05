@@ -22,7 +22,7 @@ export const MainPage = ({ projectData, skillData }: Props) => {
         {/* Hero */}
         <section
           id="hero"
-          className="min-h-screen snap-start snap-always overflow-hidden px-2"
+          className="flex min-h-screen snap-start snap-always items-center justify-center overflow-hidden px-2"
         >
           <Hero />
         </section>

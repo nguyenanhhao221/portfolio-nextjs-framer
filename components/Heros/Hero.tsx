@@ -7,7 +7,7 @@ import BackgroundCircles from './BackgroundCircles';
 
 const Hero = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-1 overflow-hidden text-center">
+    <div className="flex h-full w-full flex-col items-center justify-center gap-1  text-center">
       <Avatar />
       <BackgroundCircles />
       <motion.div
