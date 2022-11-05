@@ -6,6 +6,7 @@ import { m } from 'framer-motion';
 const Avatar = () => {
   return (
     <m.div
+      initial={{ opacity: 0 }}
       animate={{ opacity: [0, 1], scale: [0, 1] }}
       transition={{ duration: 1 }}
       className="w-24"
