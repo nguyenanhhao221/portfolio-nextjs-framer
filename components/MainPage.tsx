@@ -18,7 +18,7 @@ export const MainPage = ({ projectData, skillData }: Props) => {
     <>
       {/* Header */}
       <Header />
-      <main className="h-screen w-full snap-y snap-mandatory overflow-y-scroll scroll-smooth scrollbar-hide lg:snap-proximity">
+      <main className="h-screen w-full snap-y snap-mandatory overflow-y-scroll scroll-smooth pb-4 scrollbar-hide lg:snap-proximity">
         {/* Hero */}
         <section
           id="hero"
