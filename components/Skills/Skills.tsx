@@ -35,9 +35,9 @@ export const Skills = ({ skillData }: Props) => {
   };
 
   return (
-    <div className="mt-2 flex flex-col items-center justify-center">
+    <div className="mt-2 flex flex-col items-center justify-center gap-2">
       <SectionTitle title="Skills" />
-      <div className="md:gap:4 flex flex-col gap-2 sm:px-4">
+      <div className="md:gap:6 flex flex-col gap-4 sm:px-4">
         {sortedData.map((skill) => (
           <div
             key={skill.category}

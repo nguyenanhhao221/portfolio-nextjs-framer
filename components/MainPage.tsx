@@ -18,7 +18,7 @@ export const MainPage = ({ projectData, skillData }: Props) => {
     <>
       {/* Header */}
       <Header />
-      <main className="h-screen w-full snap-y snap-mandatory overflow-y-scroll scroll-smooth pb-4 scrollbar-hide lg:snap-proximity">
+      <main className="h-screen w-full snap-y snap-mandatory flex-col overflow-y-scroll scroll-smooth pb-12 scrollbar-hide lg:h-full lg:snap-none ">
         {/* Hero */}
         <section
           id="hero"
@@ -29,14 +29,14 @@ export const MainPage = ({ projectData, skillData }: Props) => {
         {/* About */}
         <section
           id="about"
-          className="flex h-screen snap-center snap-always items-center justify-center px-2"
+          className="flex h-screen snap-center snap-always items-center justify-center overflow-hidden px-2"
         >
           <About />
         </section>
         {/* Projects */}
         <section
           id="projects"
-          className="grid min-h-screen snap-start snap-always grid-cols-1 place-content-center px-2 lg:snap-proximity lg:snap-center lg:snap-normal"
+          className="min-h-screen snap-start snap-always overflow-hidden px-2 "
         >
           {projectData ? (
             <Projects projectData={projectData} />
@@ -47,13 +47,13 @@ export const MainPage = ({ projectData, skillData }: Props) => {
         {/* Skills */}
         <section
           id="skills"
-          className="grid min-h-screen snap-center snap-always place-content-center px-2"
+          className="grid h-screen snap-center snap-always place-content-center px-2"
         >
           {skillData ? <Skills skillData={skillData} /> : <></>}
         </section>
         <section
           id="contact"
-          className="grid snap-start snap-always grid-cols-1 place-content-center px-2 md:snap-center"
+          className="item-centers flex h-screen w-screen snap-proximity snap-end  snap-normal px-2 md:snap-center lg:snap-always"
         >
           <Contact />
         </section>

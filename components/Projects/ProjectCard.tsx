@@ -35,9 +35,10 @@ export const ProjectCard = ({ project, index, total }: Props) => {
         </h2>
 
         <motion.div
-          whileInView={{ y: [-100, 0], opacity: [0, 1] }}
-          transition={{ type: 'spring', bounce: 0.4 }}
-          className="h-44 w-full overflow-hidden md:h-[400px] lg:order-1"
+          initial={{ opacity: 0 }}
+          whileInView={{ scale: [0, 1], opacity: [0, 1] }}
+          transition={{ type: 'spring', bounce: 0.4, delay: 0.3 }}
+          className="h-44 w-full overflow-hidden md:aspect-[4/3] md:h-[300px] lg:order-1"
         >
           <Image
             className="h-full w-full rounded-lg object-fill object-center"
