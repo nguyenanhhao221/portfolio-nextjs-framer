@@ -28,7 +28,6 @@ specifiers:
   next: 12.3.1
   next-sanity: ^1.0.3
   next-sanity-image: ^4.1.0
-  next-themes: ^0.2.1
   postcss: ^8.4.18
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
@@ -59,7 +58,6 @@ dependencies:
   next: 12.3.1_biqbaboplfbrettd7655fr4n2y
   next-sanity: 1.0.3_next@12.3.1+react@18.2.0
   next-sanity-image: 4.1.0_yn4i7wuoydcdzx7evibvatyq3e
-  next-themes: 0.2.1_azq6kxkn3od7qdylwkyksrwopy
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.38.0_react@18.2.0
@@ -2419,18 +2417,6 @@ packages:
       react: 18.2.0
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /next-themes/0.2.1_azq6kxkn3od7qdylwkyksrwopy:
-    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
-    peerDependencies:
-      next: '*'
-      react: '*'
-      react-dom: '*'
-    dependencies:
-      next: 12.3.1_biqbaboplfbrettd7655fr4n2y
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /next/12.3.1_biqbaboplfbrettd7655fr4n2y:

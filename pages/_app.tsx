@@ -1,7 +1,6 @@
 import '../styles/globals.css';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import type { AppProps } from 'next/app';
-import { ThemeProvider } from 'next-themes';
 import Head from 'next/head';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -82,26 +81,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/manifest.json" />
         <meta name="msapplication-TileColor" content="black" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: dark)"
-          content="black"
-        />
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: light)"
-          content="light"
-        />
+        {/* <meta name="theme-color" media="color-scheme: dark" content="black" /> */}
         <meta
           name="google-site-verification"
           content="2QFGCblztboH5eGR90dHpGIQzzjLRHccThfeFLYEO6w"
         />
       </Head>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider attribute="class">
-          <Component {...pageProps} />
-          <ReactQueryDevtools initialIsOpen={false} />
-        </ThemeProvider>
+        <Component {...pageProps} />
+        <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </>
   );
