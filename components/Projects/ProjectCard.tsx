@@ -37,10 +37,8 @@ export const ProjectCard = ({ project, index, total }: Props) => {
         </h2>
 
         <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          whileInView={{ y: [-100, 0], opacity: [0, 1] }}
           transition={{ type: 'spring', bounce: 0.4 }}
-          viewport={{ once: true }}
           className="h-44 w-full overflow-hidden md:h-[400px] lg:order-1"
         >
           <Image
