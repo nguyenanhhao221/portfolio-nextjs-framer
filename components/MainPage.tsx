@@ -18,18 +18,18 @@ export const MainPage = ({ projectData, skillData }: Props) => {
     <>
       {/* Header */}
       <Header />
-      <main className="h-screen w-full snap-y snap-mandatory overflow-y-scroll scroll-smooth scrollbar-hide md:snap-proximity">
+      <main className="h-screen w-full snap-y snap-mandatory overflow-y-scroll scroll-smooth scrollbar-hide lg:snap-proximity">
         {/* Hero */}
         <section
           id="hero"
-          className="h-screen snap-start snap-always overflow-hidden px-2"
+          className="min-h-screen snap-start snap-always overflow-hidden px-2"
         >
           <Hero />
         </section>
         {/* About */}
         <section
           id="about"
-          className="min-h-screen snap-center snap-always px-2"
+          className="flex min-h-screen snap-center snap-always items-center justify-center px-2"
         >
           <About />
         </section>

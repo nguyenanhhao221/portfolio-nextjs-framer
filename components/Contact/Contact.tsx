@@ -5,7 +5,7 @@ import { ContactForm } from './ContactForm';
 
 export const Contact = () => {
   return (
-    <div className="flex flex-col items-center gap-2 py-12 ">
+    <div className="flex flex-col items-center gap-2 pt-12 pb-4">
       <SectionTitle title="Contact" />
       <div className=" flex flex-col items-center gap-3 text-sm leading-loose tracking-widest md:text-base">
         <h2 className="text-center text-xl duration-200 ease-in-out motion-safe:animate-bounce">
