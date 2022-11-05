@@ -20,25 +20,25 @@ export const MainPage = ({ projectData, skillData }: Props) => {
       {/* Header */}
       <Header />
       <LazyMotion features={domAnimation} strict>
-        <main className="h-screen w-full snap-y snap-mandatory flex-col overflow-y-scroll scroll-smooth scrollbar-hide lg:h-full lg:snap-none ">
+        <main className="h-screen w-full snap-y snap-mandatory flex-col overflow-y-scroll scroll-smooth scrollbar-hide lg:h-full lg:snap-none lg:snap-proximity lg:overflow-y-visible ">
           {/* Hero */}
           <section
             id="hero"
-            className="flex h-screen snap-start snap-always items-center justify-center overflow-hidden px-2"
+            className="flex h-screen snap-start snap-always items-center justify-center overflow-hidden px-2 lg:snap-align-none lg:snap-normal"
           >
             <Hero />
           </section>
           {/* About */}
           <section
             id="about"
-            className="flex h-screen snap-center snap-always items-center justify-center overflow-hidden px-2"
+            className="flex h-screen snap-center snap-always items-center justify-center overflow-hidden px-2 lg:snap-align-none lg:snap-normal"
           >
             <About />
           </section>
           {/* Projects */}
           <section
             id="projects"
-            className="min-h-screen snap-start snap-always overflow-hidden px-2 "
+            className="min-h-screen snap-start snap-always overflow-hidden px-2 lg:snap-align-none lg:snap-normal "
           >
             {projectData ? (
               <Projects projectData={projectData} />
@@ -49,13 +49,13 @@ export const MainPage = ({ projectData, skillData }: Props) => {
           {/* Skills */}
           <section
             id="skills"
-            className="grid h-screen snap-center snap-always place-content-center px-2"
+            className="grid h-screen snap-center snap-always place-content-center px-2 lg:snap-align-none lg:snap-normal"
           >
             {skillData ? <Skills skillData={skillData} /> : <></>}
           </section>
           <section
             id="contact"
-            className="item-centers snap always flex h-screen snap-center justify-center px-2 md:snap-center"
+            className="flex h-screen snap-center snap-always items-center justify-center px-2 md:snap-center lg:snap-align-none lg:snap-normal"
           >
             <Contact />
           </section>
