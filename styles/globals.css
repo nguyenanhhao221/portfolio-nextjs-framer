@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: only dark;
 }
 
 .hover\:shadow-highlight-blue {
