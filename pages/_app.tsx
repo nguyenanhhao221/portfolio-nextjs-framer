@@ -82,7 +82,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/manifest.json" />
         <meta name="msapplication-TileColor" content="black" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        {/* <meta name="theme-color" media="color-scheme: dark" content="black" /> */}
+        <meta
+          name="keywords"
+          content="developer, hao, nguyen, front end, nextjs, portfolio"
+        />
         <meta
           name="google-site-verification"
           content="2QFGCblztboH5eGR90dHpGIQzzjLRHccThfeFLYEO6w"
