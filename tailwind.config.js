@@ -7,11 +7,11 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    screens: {
+      xs: '350px',
+      ...defaultTheme.screens,
+    },
     extend: {
-      screens: {
-        xs: '350px',
-        ...defaultTheme.screens,
-      },
       colors: {
         '5b-yellow': '#ffb400',
         'gradient-purple-apple-from': '#8727ff',
