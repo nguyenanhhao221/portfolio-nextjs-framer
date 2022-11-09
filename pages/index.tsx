@@ -51,7 +51,7 @@ const Home = ({
           content="Hi my name is Hao Nguyen.I'm a front-end developer based in Vietnam Welcome to my portfolio"
         />
         <meta name="robots" content="index, follow" />
-        <title>Hao Portfolio</title>
+        <title>Hao Portfolio - Front End Developer</title>
         <link rel="canonical" href="https://haonguyen.tech" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
