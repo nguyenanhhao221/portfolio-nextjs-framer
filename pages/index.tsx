@@ -7,6 +7,14 @@ import { dehydrate, DehydratedState, QueryClient } from '@tanstack/react-query';
 import { getSanity } from '../helpers/utils';
 import { TProject, TSkill } from '../types';
 
+/**
+ * Run on the Edge runtime instead of the Node Runtime
+ * https://nextjs.org/docs/advanced-features/react-18/switchable-runtime
+ */
+export const config = {
+  runtime: 'experimental-edge',
+};
+
 const Home = ({
   projectData,
   skillData,
