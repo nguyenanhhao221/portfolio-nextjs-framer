@@ -14,7 +14,8 @@ const Avatar = () => {
       <Image
         className="h-auto w-full"
         alt="Hao"
-        priority={true}
+        sizes="40vw"
+        priority
         src={HaoAvaMemoji}
         placeholder="blur"
       />

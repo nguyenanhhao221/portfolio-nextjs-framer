@@ -10,16 +10,16 @@ export const Navbar = () => {
       transition={{ duration: 1 }}
     >
       <ul className="flex items-center justify-evenly gap-3  text-center text-sm capitalize">
-        <li className="p-1 text-center focus:border-b hover:border-b dark:text-gray-400">
+        <li className="nav-link">
           <Link href={'#about'}>about </Link>
         </li>
-        <li className="p-1 text-center focus:border-b hover:border-b dark:text-gray-400">
+        <li className="nav-link">
           <Link href={'#projects'}>projects</Link>
         </li>
-        <li className="p-1 text-center focus:border-b hover:border-b dark:text-gray-400">
+        <li className="nav-link">
           <Link href={'#skills'}>skills</Link>
         </li>
-        <li className="p-1 text-center focus:border-b hover:border-b dark:text-gray-400">
+        <li className="nav-link">
           <Link href={'#contact'}>contact</Link>
         </li>
       </ul>
