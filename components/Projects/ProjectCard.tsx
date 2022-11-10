@@ -46,6 +46,9 @@ export const ProjectCard = ({ project, index, total }: Props) => {
             src={urlFor(projectImage).url()}
             width={3840}
             height={2095}
+            sizes="(min-width: 1280px) 33vw,
+              (min-width: 1024px) 50vw,
+              100vw"
           ></Image>
         </m.div>
 
