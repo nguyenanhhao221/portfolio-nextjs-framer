@@ -11,7 +11,7 @@ export const About = () => {
   return (
     <div className="mt-2">
       <SectionTitle title="about me" />
-      <div className="py-2 text-center font-mono text-sm leading-7 tracking-wider text-slate-400 md:py-6 lg:text-base">
+      <div className="py-2 text-center font-mono text-sm leading-7 tracking-wider text-slate-100 md:py-6 lg:text-base">
         <Quotes />
       </div>
       <div className="mx-auto h-full gap-6 md:relative md:z-0 md:grid md:max-w-[80%] md:grid-cols-3 md:flex-row md:rounded-lg md:border md:border-stone-900 md:shadow-2xl lg:grid-cols-3 xl:max-w-[70%]">
@@ -39,7 +39,7 @@ export const About = () => {
           transition={{ duration: 1.2 }}
           className="flex h-full flex-col items-center gap-6 py-1 px-2 md:col-span-2 md:items-start md:justify-center md:gap-4 md:py-4  xl:text-lg"
         >
-          <p className="xs:text-sm text-center font-serif text-xs font-light md:max-w-[90%] md:text-left md:leading-[25px] lg:text-lg xl:leading-[40px]">
+          <p className="text-center font-serif text-xs font-light xs:text-sm md:max-w-[90%] md:text-left md:leading-[25px] lg:text-lg xl:leading-[40px]">
             I&apos;m a 27 years old Front-End Developer based in Vietnam. 🇻🇳
             <br />I have been falling in love with coding ever since I found out
             the amazing things you can do with just a few line of code.

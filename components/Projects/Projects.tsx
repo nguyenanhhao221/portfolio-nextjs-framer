@@ -13,7 +13,7 @@ export const Projects = ({ projectData }: Props) => {
     <div className="flex h-full flex-col items-center justify-center px-4 pt-10 lg:pt-12">
       <SectionTitle title="Projects" />
       <div>
-        <p className="py-2 text-center text-xs leading-4 text-slate-400 lg:text-base ">
+        <p className="py-2 text-center text-xs leading-4 dark:text-white lg:text-base ">
           Here are some of my highlighted projects. For more, please consider
           visit my{' '}
           <a
