@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/future/image';
-import HaoAvaMemoji from '../public/Hao-Ava-Memoji.png';
+import HaoAvatar from '../public/haonguyen.png';
 import { m } from 'framer-motion';
 
 const Avatar = () => {
@@ -16,7 +16,7 @@ const Avatar = () => {
         alt="Hao"
         sizes="40vw"
         priority
-        src={HaoAvaMemoji}
+        src={HaoAvatar}
         placeholder="blur"
       />
     </m.div>
