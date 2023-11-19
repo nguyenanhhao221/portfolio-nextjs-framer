@@ -39,7 +39,7 @@ const emailHandler: NextApiHandler = async (req, res) => {
           </body>
           </html>`,
           },
-          recipients: [{ address: 'me@haonguyen.tech' }],
+          recipients: [{ address: 'hao@haonguyen.tech' }],
         });
         if (response.results) {
           res
