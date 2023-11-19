@@ -84,7 +84,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta
           name="keywords"
-          content="developer, hao, nguyen, front end, nextjs, portfolio"
+          content="developer, hao, nguyen, full stack, nextjs, portfolio"
         />
         <meta
           name="google-site-verification"

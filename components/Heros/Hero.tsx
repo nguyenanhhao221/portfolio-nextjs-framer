@@ -14,7 +14,7 @@ const Hero = () => {
         Hao Nguyen
         <br />
         <span className="bg-gradient-to-r from-gradient-blue-apple-from via-gradient-blue-apple-via to-gradient-blue-apple-to bg-clip-text tracking-wide">
-          Front-end Developer
+          Full stack Developer
         </span>
       </h1>
       <TypeWriter />
