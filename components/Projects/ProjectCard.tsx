@@ -69,18 +69,22 @@ export const ProjectCard = ({ project, index, total }: Props) => {
             <p className="capitalize">source code</p>
           </a>
         </div>
-        <div>
-          <a
-            href={projectLiveLink}
-            title="Live Demo"
-            className="flex items-center gap-2 rounded-md p-2 underline decoration-gradient-purple-apple-from underline-offset-4 motion-safe:hover:scale-110"
-            target={'_blank'}
-            rel="noopener noreferrer"
-          >
-            <TvIcon className="hidden h-4 w-4 md:block" />
-            <p className="capitalize">live demo</p>
-          </a>
-        </div>
+        {projectLiveLink ? (
+          <div>
+            <a
+              href={projectLiveLink}
+              title="Live Demo"
+              className="flex items-center gap-2 rounded-md p-2 underline decoration-gradient-purple-apple-from underline-offset-4 motion-safe:hover:scale-110"
+              target={'_blank'}
+              rel="noopener noreferrer"
+            >
+              <TvIcon className="hidden h-4 w-4 md:block" />
+              <p className="capitalize">live demo</p>
+            </a>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
