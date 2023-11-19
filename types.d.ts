@@ -9,7 +9,7 @@ const TSanityBase = z.object({
 export const ProjectType = TSanityBase.extend({
   projectGitHub: z.string().url(),
   projectImage: z.string(),
-  projectLiveLink: z.string().url(),
+  projectLiveLink: z.string().url().optional(),
   projectName: z.string().min(1),
   projectSummary: z.string().min(1),
 });
