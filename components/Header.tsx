@@ -42,7 +42,7 @@ export const Header = () => {
           </li>
           <li className="cursor-pointer">
             <a
-              href={'https://www.linkedin.com/in/haonguyen-5a08321a9/'}
+              href={'https://www.linkedin.com/in/haonguyen-tech/'}
               target="_blank"
               title="Go to LinkedIn"
               rel="noopener noreferrer"
