@@ -40,7 +40,7 @@ export const About = () => {
           className="flex h-full flex-col items-center gap-6 py-1 px-2 md:col-span-2 md:items-start md:justify-center md:gap-4 md:py-4  xl:text-lg"
         >
           <p className="text-center font-serif text-xs font-light xs:text-sm md:max-w-[90%] md:text-left md:leading-[25px] lg:text-lg xl:leading-[40px]">
-            I&apos;m a 27 years old Front-End Developer based in Vietnam. 🇻🇳
+            I&apos;m a Full Stack Developer based in Vietnam. 🇻🇳
             <br />I have been falling in love with coding ever since I found out
             the amazing things you can do with just a few line of code.
             <br />
