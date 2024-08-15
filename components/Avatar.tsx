@@ -17,7 +17,6 @@ const Avatar = () => {
         sizes="40vw"
         priority
         src={HaoAvatar}
-        placeholder="blur"
       />
     </m.div>
   );
