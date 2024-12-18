@@ -1,6 +1,6 @@
 import Image from 'next/future/image';
 import React from 'react';
-import HaoAva from '../public/Hao-Ava.jpg';
+import HaoAva from '../public/HaoAva.jpeg';
 import { CTAButtons } from './CTAButtons';
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
 import { m } from 'framer-motion';
