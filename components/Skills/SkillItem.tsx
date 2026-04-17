@@ -1,6 +1,6 @@
 import React from 'react';
 import { TSkill } from '../../types';
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 import { urlFor } from '../../lib/sanity';
 type Props = {
@@ -23,7 +23,7 @@ export const SkillItem = ({ skill }: Props) => {
           height={512}
           className="h-8 w-8 object-contain object-center transition-all md:h-10 md:w-10 md:motion-safe:group-hover:scale-125 lg:h-16 lg:w-16"
         />
-        <span className="break-words text-center text-xs italic tracking-wide dark:text-gray-200 md:text-sm md:motion-safe:group-hover:scale-125">
+        <span className="break-words text-center text-xs italic tracking-wide md:text-sm md:motion-safe:group-hover:scale-125 dark:text-gray-200">
           {skills}
         </span>
       </a>

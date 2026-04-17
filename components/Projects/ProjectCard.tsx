@@ -1,6 +1,6 @@
 import React from 'react';
 import { m } from 'framer-motion';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { CodeBracketIcon, TvIcon } from '@heroicons/react/24/outline';
 import { TProject } from '../../types';
 import { urlFor } from '../../lib/sanity';
