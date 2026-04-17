@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  eslint: {
+    dirs: ['pages', 'components', 'helpers'],
+  },
   i18n: {
     locales: ['en'],
     defaultLocale: 'en',

@@ -1,6 +1,6 @@
 import { NextApiHandler } from 'next';
+import { Resend } from 'resend';
 import { z, ZodError } from 'zod';
-import SparkPost from 'sparkpost';
 
 //Zod schema to validate user input.
 //Even if we validate input in front end already. We still need to validate on the server since malicious user can alter the request.
@@ -25,26 +25,32 @@ const emailHandler: NextApiHandler = async (req, res) => {
       //if data input is valid we make request
       if (validateData) {
         const { name, email, phoneNumber, message } = validateData;
-        const client = new SparkPost(process.env.SPARKPOST_API_KEY);
-        const response = await client.transmissions.send({
-          content: {
-            from: process.env.MAIL_SERVER,
-            subject: `Personal Website Email from ${name}`,
-            html: `<html>
-          <body>
-          <p>${message}</p>
-          <span >From: ${email}</span>
-          <br />
-          <span>Phone Number: ${phoneNumber}</span>
-          </body>
-          </html>`,
-          },
-          recipients: [{ address: 'hao@haonguyen.tech' }],
+        const emailClient = new Resend(process.env.RESEND_API_KEY);
+        const { data, error } = await emailClient.emails.send({
+          from: `${name} <porfolio@resend.haonguyen.tech>`,
+          to: 'hao@haonguyen.tech',
+          subject: `Personal Website Email from ${name}`,
+          html: `<html>
+           <body>
+           <p>${message}</p>
+           <span >From: ${email}</span>
+           <br />
+           <span>Phone Number: ${phoneNumber}</span>
+           </body>
+           </html>`,
         });
-        if (response.results) {
+
+        if (error) {
+          console.error('error while sending email: ', error);
+          return res
+            .status(500)
+            .json({ message: 'Something went wrong! Please try again later' });
+        }
+
+        if (data) {
           res
             .status(201)
-            .json({ message: 'Email sent successfully. Thank you', response });
+            .json({ message: 'Email sent successfully. Thank you', data });
         }
       }
     } catch (e) {
@@ -55,7 +61,7 @@ const emailHandler: NextApiHandler = async (req, res) => {
 
       if (e instanceof Error) {
         return res
-          .status(404)
+          .status(500)
           .json({ message: 'Something went wrong! Please try again later' });
       }
     }

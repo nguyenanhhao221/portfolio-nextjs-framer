@@ -29,8 +29,8 @@
     "react-hook-form": "^7.38.0",
     "react-icons": "^4.6.0",
     "react-simple-typewriter": "^4.0.5",
+    "resend": "^6.12.0",
     "sharp": "^0.31.1",
-    "sparkpost": "^2.1.4",
     "tailwind-scrollbar-hide": "^1.1.7",
     "zod": "^3.19.1"
   },
@@ -54,6 +54,6 @@
     "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwind-scrollbar": "^2.0.1",
     "tailwindcss": "^3.1.8",
-    "typescript": "4.8.4"
+    "typescript": "5.6.3"
   }
 }

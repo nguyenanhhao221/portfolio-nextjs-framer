@@ -4,7 +4,7 @@
 
 ## Motivation
 
-This project is created as a chance for me to showcase my projects as a Web developers and also a chance for me to practice some cool technologies I haven't used before such as: Framer Motion, SparkPost and Sanity IO
+This project is created as a chance for me to showcase my projects as a Web developers and also a chance for me to practice some cool technologies I haven't used before such as: Framer Motion, Resend and Sanity IO
 
 Thank you Sonny Sangha for the inspiration. Check out his video [here](https://www.youtube.com/watch?v=urgi2iz9P6U)
 
@@ -33,7 +33,7 @@ Sanity IO provided a CMS system that I used in the `Projects` section and the `S
 
 Framer Motion is used for cool animation of the pages. Even though it quite heavy, but I'm looking into reduce the JavaScript bundle with their `LazyMotion`
 
-There is also a api end point `/api/contact-me` together with `SparkPost` to handle sending email from the `Contact` form to my personal email. The form is validate from the front end with `react-hook-forms` and validate again on the server with `zod`
+There is also a api end point `/api/contact-me` together with `Resend` to handle sending email from the `Contact` form to my personal email. The form is validate from the front end with `react-hook-forms` and validate again on the server with `zod`
 
 ### Challenges
 

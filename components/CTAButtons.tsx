@@ -4,7 +4,7 @@ import React from 'react';
 type Props = {
   btnTitle: string;
   href: string;
-  Icon: (props: React.ComponentProps<'svg'>) => JSX.Element;
+  Icon: (props: { className?: string }) => JSX.Element | null;
   className: string;
 };
 
