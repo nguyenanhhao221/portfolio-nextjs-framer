@@ -15,17 +15,18 @@ Built with:
 
 Technologies:
 
-* NextJS
-* Typescript
-* ReactJS
-* TailwindCSS
-* Framer Motion
-* React - Query / Tan Stack
-* Sanity IO
-* SpartPost
-* zod
+- NextJS
+- Typescript
+- ReactJS
+- TailwindCSS
+- Framer Motion
+- React - Query / Tan Stack
+- Sanity IO
+- SpartPost
+- zod
 
 ---
+
 The Project is built mainly use NextJS with ReactJS together with animation from Framer Motion and CSS is done by TailwindCSS.
 Thanks to NextJS Server Side Rendering or in this case incremental static regeneration the page is prebuilt on the server and will helps a lot in loading time for the visitor
 

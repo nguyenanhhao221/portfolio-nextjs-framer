@@ -1,4 +1,4 @@
-import Image from 'next/future/image';
+import Image from 'next/image';
 import React from 'react';
 import HaoAva from '../public/HaoAva.jpeg';
 import { CTAButtons } from './CTAButtons';
@@ -37,7 +37,7 @@ export const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2 }}
-          className="flex h-full flex-col items-center gap-6 py-1 px-2 md:col-span-2 md:items-start md:justify-center md:gap-4 md:py-4  xl:text-lg"
+          className="flex h-full flex-col items-center gap-6 px-2 py-1 md:col-span-2 md:items-start md:justify-center md:gap-4 md:py-4  xl:text-lg"
         >
           <p className="text-center font-serif text-xs font-light xs:text-sm md:max-w-[90%] md:text-left md:leading-[25px] lg:text-lg xl:leading-[40px]">
             I&apos;m a Full Stack Developer based in Vietnam. 🇻🇳

@@ -1,6 +1,5 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
-import { groq } from 'next-sanity';
 import React from 'react';
 import { MainPage } from '../components/MainPage';
 import { dehydrate, DehydratedState, QueryClient } from '@tanstack/react-query';
@@ -78,10 +77,10 @@ export const getStaticProps: GetStaticProps<{
   });
 
   await queryClient.prefetchQuery(['getProjects'], () =>
-    getSanity(groq`*[_type == 'projects'] | order(_createdAt asc)`)
+    getSanity("*[_type == 'projects'] | order(_createdAt asc)")
   );
   await queryClient.prefetchQuery(['getSkills'], () =>
-    getSanity(groq`*[_type == 'skills'] | order(_createdAt asc)`)
+    getSanity("*[_type == 'skills'] | order(_createdAt asc)")
   );
   // React query type ?
   //* Because this data can be undefined , if it is undefined, the getServerSideProps cannot serialized it into JSON and the app will break, so as a work around, we have to check if this data is undefined then we return the props.projectData as false
