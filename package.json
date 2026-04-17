@@ -29,8 +29,8 @@
     "react-hook-form": "^7.38.0",
     "react-icons": "^4.6.0",
     "react-simple-typewriter": "^4.0.5",
+    "resend": "^6.12.0",
     "sharp": "^0.31.1",
-    "sparkpost": "^2.1.4",
     "tailwind-scrollbar-hide": "^1.1.7",
     "zod": "^3.19.1"
   },
